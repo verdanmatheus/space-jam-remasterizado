@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jam Central | Space Jam</title>
+  <meta name="description" content="Jam Central: notas de produção, cineastas, trailer e fotos de Space Jam (1996).">
+  <link rel="icon" href="img/comum/littlelogo.png">
+  <!-- Bootstrap 5 (CSS), salvo no projeto: funciona sem internet -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Estilo do site: vem depois do Bootstrap para poder sobrescrever -->
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<!-- Tema da Jam Central (cores no css/style.css, seção 1) -->
+<body class="tema-jamcentral">
+
+  <!-- ==================== MENU (igual em todas as páginas) ====================
+       Se mudar o menu, mude em TODAS as páginas (no VS Code: Ctrl+Shift+H).
+       Na página atual, o link da seção recebe class="active". -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-sj sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="img/comum/littlelogo.png" alt="Space Jam: voltar ao início" width="70" height="60">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu-principal"
+        aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu-principal">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" aria-current="page" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">O Filme</a>
+            <ul class="dropdown-menu">
+              <li><h6 class="dropdown-header">Jam Central</h6></li>
+              <li><a class="dropdown-item" href="filme.html">Visão geral</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="filme.html#producao">Notas de Produção</a></li>
+              <li><a class="dropdown-item" href="filme.html#cineastas">Os Cineastas</a></li>
+              <li><a class="dropdown-item" href="filme.html#trailer">Trailer</a></li>
+              <li><a class="dropdown-item" href="filme.html#fotos">Fotos do Filme</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Elenco</a>
+            <ul class="dropdown-menu">
+              <li><h6 class="dropdown-header">The Lineup</h6></li>
+              <li><a class="dropdown-item" href="elenco.html">Visão geral</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="elenco.html#looney-tunes">Looney Tunes</a></li>
+              <li><a class="dropdown-item" href="elenco.html#jogadores">Jogadores da NBA</a></li>
+              <li><a class="dropdown-item" href="elenco.html#atores">Atores</a></li>
+              <li><a class="dropdown-item" href="elenco.html#viloes">Os Vilões</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Bastidores</a>
+            <ul class="dropdown-menu">
+              <li><h6 class="dropdown-header">Behind the Jam</h6></li>
+              <li><a class="dropdown-item" href="bastidores.html">Visão geral</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="bastidores.html#personagens">Criação dos Personagens</a></li>
+              <li><a class="dropdown-item" href="bastidores.html#esbocos">Esboços da Animação</a></li>
+              <li><a class="dropdown-item" href="bastidores.html#making-of">Imagens do Set</a></li>
+              <li><a class="dropdown-item" href="bastidores.html#tecnica">Notas Técnicas</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Trilha Sonora</a>
+            <ul class="dropdown-menu">
+              <li><h6 class="dropdown-header">Lunar Tunes</h6></li>
+              <li><a class="dropdown-item" href="trilha.html">Visão geral</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="trilha.html#faixas">As Músicas</a></li>
+              <li><a class="dropdown-item" href="trilha.html#destaques">Artistas em Destaque</a></li>
+              <li><a class="dropdown-item" href="trilha.html#radio">No Rádio</a></li>
+              <li><a class="dropdown-item" href="trilha.html#frases">Frases do Filme</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Jogos</a>
+            <ul class="dropdown-menu dropdown-menu-lg-end">
+              <li><h6 class="dropdown-header">Junior Jam</h6></li>
+              <li><a class="dropdown-item" href="jogos.html">Visão geral</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="jogos.html#quiz">Quiz dos Looney Tunes</a></li>
+              <li><a class="dropdown-item" href="jogos.html#monstars">Match the Monstars</a></li>
+              <li><a class="dropdown-item" href="jogos.html#dicas">Dicas de Basquete</a></li>
+              <li><a class="dropdown-item" href="jogos.html#colorir">Livro de Colorir</a></li>
+              <li><a class="dropdown-item" href="jogos.html#fotos">Coisas Legais para Ver</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== CAPA ====================
+       Cenário do filme (--capa do tema, css/style.css), planeta, título,
+       texto e atalhos para as seções desta página. -->
+  <header class="capa">
+    <div class="container capa-conteudo">
+      <img src="img/home/icone-jamcentral.png" class="capa-planeta" alt="" width="54" height="54">
+      <h1 class="capa-titulo">O Filme</h1>
+      <p class="capa-texto">
+        Você chegou à Estação Jam Central, o ponto de encontro de tudo sobre <b>Space Jam</b>.
+        Das melhores poltronas da casa, você pode ler as notas de produção, conhecer os cineastas,
+        assistir ao trailer e ver um monte de fotos do filme.
+      </p>
+      <ul class="subnav capa-atalhos">
+        <li><a href="#producao">Notas de Produção</a></li>
+        <li><a href="#cineastas">Os Cineastas</a></li>
+        <li><a href="#trailer">Trailer</a></li>
+        <li><a href="#fotos">Fotos do Filme</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ==================== NOTAS DE PRODUÇÃO ====================
+         Uma aba para cada parte do texto (nav-pills do Bootstrap). -->
+    <section id="producao" class="secao">
+      <div class="container">
+        <h2 class="titulo-secao">
+          <img src="img/filme/b-prodnotes.gif" alt="Notas de Produção" width="364" height="52">
+        </h2>
+
+        <ul class="nav nav-pills nav-pills-sj" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#notas-geral" type="button" role="tab">Visão geral</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#notas-historia" type="button" role="tab">A História</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#notas-producao" type="button" role="tab">A Produção</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#notas-bola" type="button" role="tab">Bola ao Alto</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#notas-intervalo" type="button" role="tab">Intervalo</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#notas-vozes" type="button" role="tab">As Vozes</button>
+          </li>
+        </ul>
+
+        <div class="tab-content caixa-texto">
+          <div class="tab-pane fade clearfix show active" id="notas-geral" role="tabpanel">
+            <p class="frase-destaque"><i>"Ehhh, o que é que há, velhinho?"</i></p>
+            <img src="img/filme/producao/prod1.jpg" alt="Cena do filme" width="144" height="87" class="img-texto float-sm-start">
+            <p>
+              Os Looney Tunes da Warner Bros., sob o comando criativo do cineasta Ivan Reitman, disparam
+              rumo ao futuro no seu primeiro longa-metragem: <b>Space Jam</b>, uma mistura de animação e
+              live-action que junta o astro do esporte Michael Jordan e o clássico espertalhão Pernalonga
+              (Bugs Bunny).
+            </p>
+            <p>
+              O público vai viajar entre a Terra e o espaço sideral, entre a quadra de basquete, o campo de
+              beisebol e a Terra dos Looney Tunes. São cenas com alguns dos maiores astros da NBA e uma
+              animação 2D e 3D riquíssima, na companhia do gênio mais divertido do basquete e do coelho
+              mais descolado que já pisou numa quadra.
+            </p>
+            <img src="img/filme/producao/prod2.jpg" alt="Cena do filme" width="144" height="97" class="img-texto float-sm-end">
+            <p>
+              Ivan Reitman produz e Joe Pytka dirige. Joe Medjuck e Daniel Goldberg também são produtores,
+              e o roteiro é de Steve Rudnick &amp; Leo Benvenuti e Timothy Harris &amp; Herschel Weingrod.
+              A animação é da Warner Bros. Feature Animation, com codireção de Bruce Smith e Tony Cervone.
+              Os efeitos que juntam atores e desenhos são da Cinesite, sob a direção de Ed Jones.
+            </p>
+          </div>
+          <div class="tab-pane fade clearfix" id="notas-historia" role="tabpanel">
+            <img src="img/filme/producao/prod3.jpg" alt="Cena do filme" width="144" height="96" class="img-texto float-sm-start">
+            <p>
+              O Pernalonga meteu a si mesmo e seus amigos numa enrascada. Os Nerdlucks, uma gangue de
+              pequenos alienígenas rabugentos, pousaram na Terra a mando do chefe, o cruel Swackhammer
+              (voz de Danny DeVito). O plano deles é sequestrar os Looney Tunes e levá-los para o Moron
+              Mountain, o parque de diversões falido de Swackhammer.
+            </p>
+            <p>
+              O Pernalonga desafia os pequenos e fracos alienígenas para uma partida de basquete decisiva:
+              se os Looney Tunes vencerem, ficam na Terra. Se perderem, vão parar nas mãos de Swackhammer.
+            </p>
+            <img src="img/filme/producao/prod4.jpg" alt="Cena do filme" width="144" height="86" class="img-texto float-sm-end">
+            <p>
+              Os aliens aceitam o desafio rápido demais. O Pernalonga ainda não sabe que os Nerdlucks
+              conseguem "absorver" habilidades. Eles roubam o talento de astros da NBA como Charles Barkley,
+              Patrick Ewing, Muggsy Bogues, Larry Johnson e Shawn Bradley e se transformam nos gigantescos
+              e poderosos <b>Monstars</b>!
+            </p>
+            <p>
+              O Pernalonga precisa de ajuda séria. Mas os melhores jogadores de basquete estão todos perdendo
+              o talento... Bom, tem um jogador de beisebol que ele conhece.
+            </p>
+            <img src="img/filme/producao/prod5.jpg" alt="Cena do filme" width="144" height="96" class="img-texto float-sm-start">
+            <p>
+              Michael Jordan tinha se aposentado do basquete para jogar beisebol, com sucesso limitado.
+              Os Looney Tunes o capturam num campo de golfe, levam-no para a Terra dos Looney Tunes e
+              explicam o problema do seu jeitinho. Ele topa entrar no time (e o que mais poderia fazer?
+              Eles não o deixam voltar para casa!).
+            </p>
+            <p>
+              A missão é enorme: o Eufrazino sai atirando para todo lado, o Taz não obedece a ninguém,
+              o Coiote continua atrás do Papa-Léguas e o caos toma conta de tudo. Até que aparece a mais
+              nova integrante do Tune Squad: <b>Lola Bunny</b>, craque das enterradas e a "coelha dos
+              sonhos" do apaixonado Pernalonga.
+            </p>
+            <p>
+              Michael Jordan interpreta a si mesmo e contracena com Wayne Knight (de <i>Seinfeld</i>), como o
+              assessor de imprensa Stan Podolak, e com Theresa Randle, como Juanita, esposa de Jordan.
+            </p>
+          </div>
+          <div class="tab-pane fade clearfix" id="notas-producao" role="tabpanel">
+            <p>
+              Nenhuma turma de desenhos combina tanto com uma aventura esportiva maluca quanto os Looney
+              Tunes, famosos há mais de meio século pela energia frenética e pelo humor inspirado.
+            </p>
+            <p>
+              A ideia veio de David Falk, advogado e empresário de Michael Jordan, e do seu sócio Ken Ross,
+              que propuseram à Warner Bros. um filme juntando Jordan e os Looney Tunes. O estúdio procurava
+              havia tempos um longa para os personagens e adorou a ideia.
+            </p>
+            <img src="img/filme/producao/prod6.jpg" alt="Cena do filme" width="180" height="120" class="img-texto float-sm-start">
+            <p>
+              Para comandar o projeto, a Warner escolheu Ivan Reitman, responsável por algumas das comédias
+              de maior sucesso da época.
+            </p>
+            <p class="citacao">
+              "Os Looney Tunes, com a sua tradição de irreverência desde os anos 1940, sempre foram desenhos
+              feitos para adultos. As crianças adoram, mas o humor deles sempre foi mais louco e moderno do
+              que qualquer outro. Eu queria recuperar essa tradição com uma história para o público de hoje."
+              (Ivan Reitman)
+            </p>
+            <p>
+              Reitman encomendou o roteiro e montou a equipe: os produtores Joe Medjuck e Daniel Goldberg e o
+              diretor Joe Pytka, premiado pelo trabalho pioneiro misturando live-action e animação. Em um ano,
+              as filmagens começaram nos estúdios da Warner em Burbank, na Califórnia.
+            </p>
+          </div>
+          <div class="tab-pane fade clearfix" id="notas-bola" role="tabpanel">
+            <img src="img/filme/producao/prod7.jpg" alt="Cena do filme" width="215" height="143" class="img-texto float-sm-end">
+            <p>
+              Organizar as filmagens foi o primeiro desafio. Era preciso respeitar a temporada de Jordan no
+              Chicago Bulls e ainda dar tempo aos animadores para criar os personagens que contracenariam com
+              atores já filmados.
+            </p>
+            <p>
+              O Stage 22 da Warner virou um enorme cenário de "tela verde". Ali, diante de paredes com uma
+              grade desenhada para marcar a posição dos futuros personagens, Jordan jogou basquete com os
+              colegas desenhados e contra os Monstars.
+            </p>
+            <img src="img/filme/producao/prod8.jpg" alt="Cena do filme" width="97" height="144" class="img-texto retrato float-sm-start">
+            <p>
+              Dois terços das 60 diárias de filmagem aconteceram nesse estúdio, onde Jordan, Bill Murray e
+              Wayne Knight eram os únicos atores "de verdade". Para guiar o olhar e as reações dos astros,
+              atores vestidos de verde da cabeça aos pés ocupavam o lugar dos Looney Tunes e dos Monstars.
+              Depois, eles sumiam na montagem.
+            </p>
+            <p>
+              Animadores ficavam no set o tempo todo: o diretor podia imprimir um quadro do filme e pedir que
+              um animador desenhasse ali o personagem. Assim, dava para ter uma ideia da cena pronta meses
+              antes.
+            </p>
+            <img src="img/filme/producao/prod9.jpg" alt="Cena do filme" width="144" height="95" class="img-texto float-sm-end">
+            <p>
+              Fora do estúdio, as locações incluíram o Blair Field, em Long Beach, para as cenas de Jordan no
+              time de beisebol Birmingham Barons, e o Lake Arrowhead Country Club, onde Jordan joga golfe com
+              Bill Murray e Larry Bird antes de ser "sugado" para a Terra dos Looney Tunes.
+            </p>
+          </div>
+          <div class="tab-pane fade clearfix" id="notas-intervalo" role="tabpanel">
+            <p>
+              Terminadas as filmagens, o foco passou para a animação e os efeitos visuais. Estúdios nos Estados
+              Unidos, no Canadá e no Reino Unido trabalharam por cerca de mais 12 meses, combinando animação
+              tradicional, computação gráfica (CGI) e efeitos especiais.
+            </p>
+            <p>
+              Tudo começava do jeito clássico, com lápis e papel. Os layouts desenhados à mão viravam cenários
+              pintados; depois vinham a animação bruta, a limpeza dos traços e a animação de efeitos (sombras,
+              brilhos e objetos). Por fim, tudo era escaneado e pintado no computador.
+            </p>
+            <p class="citacao">
+              "Criamos dois universos de cor: cores primárias para os Looney Tunes e cores secundárias para os
+              Monstars e o parque Moron Mountain. No total, fizemos entre 300 e 400 cenários."
+              (Bill Perkins, diretor de arte da animação)
+            </p>
+            <img src="img/filme/producao/prod10.jpg" alt="Cena do filme" width="180" height="121" class="img-texto float-sm-start">
+            <p>
+              Na Cinesite, o material era digitalizado e combinado às cenas filmadas. Para a cena em que Stan
+              é inflado pelos Looney Tunes, o rosto de Wayne Knight foi escaneado em 3D. Já a torcida do jogo
+              mistura personagens desenhados, personagens em 3D e pessoas reais usando máscaras.
+            </p>
+          </div>
+          <div class="tab-pane fade clearfix" id="notas-vozes" role="tabpanel">
+            <p>
+              Reitman escalou atores com talento para comédia e improviso para dar vida aos personagens, à
+              altura do lendário Mel Blanc:
+            </p>
+            <ul>
+              <li><b>Billy West</b>: Pernalonga e Hortelino Troca-Letras</li>
+              <li><b>Dee Bradley Baker</b>: Patolino, Taz e Bull</li>
+              <li><b>Bob Bergen</b>: Bertie, Hubie, Marvin, o Marciano, Gaguinho, Ligeirinho e Piu-Piu</li>
+              <li><b>Bill Farmer</b>: Frajola, Eufrazino Puxa-Briga e Frangolino</li>
+              <li><b>Kath Soucie</b>: Lola Bunny</li>
+              <li><b>Danny DeVito</b>: Swackhammer</li>
+            </ul>
+            <p class="citacao">
+              "Foi uma mistura do velho e do novo que, acredito, vai aumentar o encanto eterno da animação
+              como entretenimento." (Ivan Reitman)
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== OS CINEASTAS ==================== -->
+    <section id="cineastas" class="secao">
+      <div class="container">
+        <h2 class="titulo-secao">
+          <img src="img/filme/b-filmmakers.gif" alt="Os Cineastas" width="345" height="50">
+        </h2>
+
+        <!-- Destaques: produtor e diretor -->
+        <div class="row g-4 mb-4">
+          <div class="col-12 col-md-6">
+            <div class="card card-sj">
+              <img src="img/filme/cineastas/reitman.jpg" class="card-imagem" alt="Ivan Reitman no set" width="219" height="144">
+              <div class="card-body">
+                <h3 class="card-title h4">Ivan Reitman</h3>
+                <p class="card-subtitle mb-2">Produtor</p>
+                <p class="card-text">
+                  Diretor e produtor de algumas das comédias mais queridas do cinema americano, como
+                  <i>Os Caça-Fantasmas</i>, <i>Irmãos Gêmeos</i>, <i>Um Tira no Jardim de Infância</i> e
+                  <i>Dave</i>. Também produziu <i>O Clube dos Cafajestes</i> e <i>Beethoven</i>. Nasceu na
+                  antiga Tchecoslováquia e fugiu com a família para o Canadá aos 4 anos.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="card card-sj">
+              <img src="img/filme/cineastas/pytka.jpg" class="card-imagem" alt="Joe Pytka com Michael Jordan" width="215" height="144">
+              <div class="card-body">
+                <h3 class="card-title h4">Joe Pytka</h3>
+                <p class="card-subtitle mb-2">Diretor</p>
+                <p class="card-text">
+                  Considerado o maior diretor de comerciais de TV, com mais de 5.000 filmes publicitários,
+                  entre eles o famoso "Nothing but net", com Michael Jordan e Larry Bird, para o McDonald's.
+                  <b>Space Jam</b> foi apenas o seu segundo longa-metragem.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Restante da equipe: abre e fecha sem JavaScript (<details>) -->
+        <details class="equipe">
+          <summary>Ver a equipe completa (15 pessoas)</summary>
+          <div class="caixa-texto">
+            <div class="table-responsive">
+              <table class="table table-sj table-striped table-hover align-middle">
+                <thead>
+                  <tr>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Função</th>
+                    <th scope="col">Você talvez conheça por...</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>Joe Medjuck</td><td>Produtor</td><td>Parceiro de longa data de Reitman; produziu <i>Beethoven</i> e <i>Beethoven 2</i></td></tr>
+                  <tr><td>Daniel Goldberg</td><td>Produtor</td><td>Roteirista de <i>Almôndegas</i> e <i>Recrutas da Pesada</i></td></tr>
+                  <tr><td>David Falk</td><td>Produtor executivo</td><td>Advogado e empresário de Michael Jordan</td></tr>
+                  <tr><td>Ken Ross</td><td>Produtor executivo</td><td>Criou a série de vídeos campeões de venda de Michael Jordan</td></tr>
+                  <tr><td>Geoffrey Kirkland</td><td>Design de produção</td><td>Indicado ao Oscar por <i>Os Eleitos</i></td></tr>
+                  <tr><td>Michael Chapman</td><td>Diretor de fotografia</td><td>Indicado ao Oscar por <i>Touro Indomável</i> e <i>O Fugitivo</i></td></tr>
+                  <tr><td>Sheldon Kahn</td><td>Montador e coprodutor</td><td>Indicado ao Oscar por <i>Um Estranho no Ninho</i> e <i>Entre Dois Amores</i></td></tr>
+                  <tr><td>Gordon Webb</td><td>Coprodutor</td><td>Trabalhou em <i>Dave</i>, <i>Irmãos Gêmeos</i> e <i>Os Caça-Fantasmas II</i></td></tr>
+                  <tr><td>Curtis Polk</td><td>Coprodutor</td><td>Negociou quatro dos cinco maiores contratos da NBA até 1996</td></tr>
+                  <tr><td>James Newton Howard</td><td>Música</td><td>Indicado ao Oscar por <i>O Príncipe das Marés</i> e <i>O Fugitivo</i></td></tr>
+                  <tr><td>Bruce Smith</td><td>Codiretor de animação</td><td>Animador de <i>Uma Cilada para Roger Rabbit</i></td></tr>
+                  <tr><td>Tony Cervone</td><td>Codiretor de animação</td><td>Animador de <i>Tiny Toon Adventures</i> e <i>Animaniacs</i></td></tr>
+                  <tr><td>Ron Tippe</td><td>Produtor de animação</td><td>Produziu o curta do Mickey <i>Runaway Brain</i>, indicado ao Oscar</td></tr>
+                  <tr><td>Bill Perkins</td><td>Diretor de arte da animação</td><td>Diretor de arte de <i>Aladdin</i></td></tr>
+                  <tr><td>Ed Jones</td><td>Efeitos visuais</td><td>Ganhou o Oscar por <i>Uma Cilada para Roger Rabbit</i>; fundou a Cinesite</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- ==================== TRAILER ==================== -->
+    <section id="trailer" class="secao">
+      <div class="container">
+        <h2 class="titulo-secao">
+          <img src="img/filme/b-trailer.gif" alt="O Trailer" width="242" height="51">
+        </h2>
+        <p class="intro">
+          Os dois minutos de trailer mais animados que já passaram num cinema. Em 1996, era um arquivo
+          QuickTime de 7,5 MB para baixar. Hoje, é só dar o play:
+        </p>
+
+        <!-- Para trocar o vídeo, mude só o código depois de /embed/ -->
+        <div class="ratio ratio-16x9 mx-auto mb-3" style="max-width: var(--largura-leitura);">
+          <iframe src="https://www.youtube-nocookie.com/embed/oKNy-MWjkcU"
+            title="Trailer de Space Jam (1996)" allowfullscreen
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+        </div>
+        <p class="text-center mb-0">
+          <small>O vídeo não carregou? <a href="https://www.youtube.com/watch?v=oKNy-MWjkcU" target="_blank" rel="noopener">Assista no YouTube <span aria-hidden="true">↗</span></a>.
+          Os extras do making of estão nos <a href="bastidores.html#making-of">Bastidores</a>.</small>
+        </p>
+      </div>
+    </section>
+
+    <!-- ==================== FOTOS DO FILME ====================
+         Abas do Bootstrap (nav-pills). Cada foto é um link com data-lightbox:
+         ao clicar, abre ampliada (js/script.js). A legenda é o "alt" da imagem. -->
+    <section id="fotos" class="secao">
+      <div class="container">
+        <h2 class="titulo-secao">
+          <img src="img/filme/b-photos.gif" alt="Fotos do Filme" width="302" height="88">
+        </h2>
+        <p class="intro">
+          Graças ao milagre dos computadores, live-action e animação aparecem juntos na telona como
+          nunca antes. Clique em uma foto para ampliar. <i>Fotos de Bruce Talamon.</i>
+        </p>
+
+        <ul class="nav nav-pills nav-pills-sj" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#fotos-liveanim" type="button" role="tab">Gente + Desenho</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#fotos-nba" type="button" role="tab">Jogadores da NBA</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#fotos-tuneland" type="button" role="tab">Terra dos Looney Tunes</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#fotos-tunesquad" type="button" role="tab">Tune Squad</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#fotos-monstars" type="button" role="tab">Os Vilões</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#fotos-green" type="button" role="tab">Tela Verde</button>
+          </li>
+        </ul>
+
+        <div class="tab-content">
+
+          <!-- Live-action + animação -->
+          <div class="tab-pane fade show active" id="fotos-liveanim" role="tabpanel">
+            <div class="row g-3">
+              <div class="col-6 col-md-4 col-lg-3"><a href="img/filme/fotos/liveanim1.jpg" class="foto" data-lightbox><img src="img/filme/fotos/liveanim1.jpg" alt="Pernalonga e Michael dividem uma garrafa d'água." loading="lazy"></a></div>
+              <div class="col-6 col-md-4 col-lg-3"><a href="img/filme/fotos/liveanim2.jpg" class="foto" data-lightbox><img src="img/filme/fotos/liveanim2.jpg" alt="Pernalonga e Patolino andam escondidos pela casa de Michael Jordan." loading="lazy"></a></div>
+              <div class="col-6 col-md-4 col-lg-3"><a href="img/filme/fotos/liveanim3.jpg" class="foto" data-lightbox><img src="img/filme/fotos/liveanim3.jpg" alt="O Tune Squad avalia os adversários." loading="lazy"></a></div>
+              <div class="col-6 col-md-4 col-lg-3"><a href="img/filme/fotos/liveanim4.jpg" class="foto" data-lightbox><img src="img/filme/fotos/liveanim4.jpg" alt="Michael Jordan se recupera de uma pancada na cabeça, com um toque de animação clássica." loading="lazy"></a></div>
+              <div class="col-6 col-md-4 col-lg-3"><a href="img/filme/fotos/liveanim5.jpg" class="foto" data-lightbox><img src="img/filme/fotos/liveanim5.jpg" alt="Michael Jordan assiste, sem saída, a um discurso do Pernalonga." loading="lazy"></a></div>
+              <div class="col-6 col-md-4 col-lg-3"><a href="img/filme/fotos/liveanim6.jpg" class="foto" data-lightbox><img src="img/filme/fotos/liveanim6.jpg" alt="Pernalonga dá uma mãozinha aos filhos de Michael Jordan." loading="lazy"></a></div>
+              <div class="col-6 col-md-4 col-lg-3"><a href="img/filme/fotos/liveanim7.jpg" class="foto" data-lightbox><img src="img/filme/fotos/liveanim7.jpg" alt="Michael e o resto do Tune Squad encaram os adversários." loading="lazy"></a></div>
+              <div class="col-6 col-md-4 col-lg-3"><a href="img/filme/fotos/liveanim8.jpg" class="foto" data-lightbox><img src="img/filme/fotos/liveanim8.jpg" alt="Patolino faz um check-up rápido em Michael." loading="lazy"></a></div>
+              <div class="col-6 col-md-4 col-lg-3"><a href="img/filme/fotos/liveanim9.jpg" class="foto" data-lightbox><img src="img/filme/fotos/liveanim9.jpg" alt="A filha de Michael Jordan é acordada por intrusos animados." loading="lazy"></a></div>
+              <div class="col-6 col-md-4 col-lg-3"><a href="img/filme/fotos/jordan6.jpg" class="foto" data-lightbox><img src="img/filme/fotos/jordan6.jpg" alt="Jordan corre pela quadra enquanto personagens animados e a torcida assistem ao jogo." loading="lazy"></a></div>
+            </div>
+          </div>
+
+          <!-- Jogadores da NBA -->
+          <div class="tab-pane fade" id="fotos-nba" role="tabpanel">
+            <div class="row g-3">
+              <div class="col-6 col-md-4 col-lg-3"><a href="img/filme/fotos/nba1.jpg" class="foto" data-lightbox><img src="img/filme/fotos/nba1.jpg" alt="Os jogadores da NBA de Space Jam (da esquerda para a direita): Shawn Bradley, Charles Barkley, Patrick Ewing, Muggsy Bogues e Larry Johnson." loading="lazy"></a></div>
+              <div class="col-6 col-md-4 col-lg-3"><a href="img/filme/fotos/nba2.jpg" class="foto" data-lightbox><img src="img/filme/fotos/nba2.jpg" alt="Charles Barkley perde para umas crianças num jogo de rua." loading="lazy"></a></div>
+              <div class="col-6 col-md-4 col-lg-3"><a href="img/filme/fotos/nba3.jpg" class="foto" data-lightbox><img src="img/filme/fotos/nba3.jpg" alt="Os jogadores no hospital (da esquerda para a direita): Patrick Ewing, Larry Johnson, Shawn Bradley e Muggsy Bogues." loading="lazy"></a></div>
+              <div class="col-6 col-md-4 col-lg-3"><a href="img/filme/fotos/nba4.jpg" class="foto" data-lightbox><img src="img/filme/fotos/nba4.jpg" alt="Charles Barkley reza." loading="lazy"></a></div>
+              <div class="col-6 col-md-4 col-lg-3"><a href="img/filme/fotos/nba5.jpg" class="foto" data-lightbox><img src="img/filme/fotos/nba5.jpg" alt="Os jogadores da NBA de Space Jam: Larry Johnson, Patrick Ewing, Michael Jordan, Shawn Bradley, Charles Barkley e Muggsy Bogues (embaixo)." loading="lazy"></a></div>
+              <div class="col-6 col-md-4 col-lg-3"><a href="img/filme/fotos/nba6.jpg" class="foto" data-lightbox><img src="img/filme/fotos/nba6.jpg" alt="Larry Bird dá a tacada inicial enquanto Michael Jordan, Bill Murray e Wayne Knight (como Stan) observam." loading="lazy"></a></div>
+              <div class="col-6 col-md-4 col-lg-3"><a href="img/filme/fotos/nba7.jpg" class="foto" data-lightbox><img src="img/filme/fotos/nba7.jpg" alt="Uma médium conduz uma sessão espírita com Patrick Ewing, Shawn Bradley, Muggsy Bogues e Larry Johnson." loading="lazy"></a></div>
+              <div class="col-6 col-md-4 col-lg-3"><a href="img/filme/fotos/nba8.jpg" class="foto" data-lightbox><img src="img/filme/fotos/nba8.jpg" alt="Jordan e Stan (Wayne Knight) se juntam a Charles Barkley, Patrick Ewing, Shawn Bradley, Muggsy Bogues e Larry Johnson." loading="lazy"></a></div>
+              <div class="col-6 col-md-4 col-lg-3"><a href="img/filme/fotos/nba9.jpg" class="foto" data-lightbox><img src="img/filme/fotos/nba9.jpg" alt="Larry Bird (à esquerda) e Bill Murray assistem a um jogo." loading="lazy"></a></div>
+              <div class="col-6 col-md-4 col-lg-3"><a href="img/filme/fotos/jordan5.jpg" class="foto" data-lightbox><img src="img/filme/fotos/jordan5.jpg" alt="Michael Jordan parte para o arremesso." loading="lazy"></a></div>
+            </div>
+          </div>
+
+          <!-- Terra dos Looney Tunes -->
+          <div class="tab-pane fade" id="fotos-tuneland" role="tabpanel">
+            <div class="row g-3">
+              <div class="col-6 col-md-4 col-lg-3"><a href="img/filme/fotos/tuneland1.jpg" class="foto" data-lightbox><img src="img/filme/fotos/tuneland1.jpg" alt="Pernalonga encolhido na sua cela." loading="lazy"></a></div>
+              <div class="col-6 col-md-4 col-lg-3"><a href="img/filme/fotos/tuneland2.jpg" class="foto" data-lightbox><img src="img/filme/fotos/tuneland2.jpg" alt="Patolino sai da banheira direto para o palco." loading="lazy"></a></div>
+              <div class="col-6 col-md-4 col-lg-3"><a href="img/filme/fotos/tuneland3.jpg" class="foto" data-lightbox><img src="img/filme/fotos/tuneland3.jpg" alt="Dr. Patolino tira todo mundo do caminho." loading="lazy"></a></div>
+              <div class="col-6 col-md-4 col-lg-3"><a href="img/filme/fotos/tuneland4.jpg" class="foto" data-lightbox><img src="img/filme/fotos/tuneland4.jpg" alt="Taz atrapalha a entrega do correio." loading="lazy"></a></div>
+              <div class="col-6 col-md-4 col-lg-3"><a href="img/filme/fotos/tuneland5.jpg" class="foto" data-lightbox><img src="img/filme/fotos/tuneland5.jpg" alt="Eufrazino enfrenta um Nerdluck." loading="lazy"></a></div>
+              <div class="col-6 col-md-4 col-lg-3"><a href="img/filme/fotos/tuneland6.jpg" class="foto" data-lightbox><img src="img/filme/fotos/tuneland6.jpg" alt="Pernalonga explica o seu ponto de vista." loading="lazy"></a></div>
+              <div class="col-6 col-md-4 col-lg-3"><a href="img/filme/fotos/tuneland7.jpg" class="foto" data-lightbox><img src="img/filme/fotos/tuneland7.jpg" alt="Os Looney Tunes mostram o placar." loading="lazy"></a></div>
+              <div class="col-6 col-md-4 col-lg-3"><a href="img/filme/fotos/tuneland8.jpg" class="foto" data-lightbox><img src="img/filme/fotos/tuneland8.jpg" alt="Pernalonga fala dentro de um ouvido." loading="lazy"></a></div>
+              <div class="col-6 col-md-4 col-lg-3"><a href="img/filme/fotos/tuneland9.jpg" class="foto" data-lightbox><img src="img/filme/fotos/tuneland9.jpg" alt="Dr. Patolino dá o seu selo de aprovação." loading="lazy"></a></div>
+              <div class="col-6 col-md-4 col-lg-3"><a href="img/filme/fotos/jordan2.jpg" class="foto" data-lightbox><img src="img/filme/fotos/jordan2.jpg" alt="Jordan ganha uma lambida do seu cachorro." loading="lazy"></a></div>
+            </div>
+          </div>
+
+          <!-- Tune Squad -->
+          <div class="tab-pane fade" id="fotos-tunesquad" role="tabpanel">
+            <div class="row g-3">
+              <div class="col-6 col-md-4 col-lg-3"><a href="img/filme/fotos/tunesquad1.jpg" class="foto" data-lightbox><img src="img/filme/fotos/tunesquad1.jpg" alt="O Tune Squad e o seu jogador-técnico, Michael Jordan, se preparam para o jogo." loading="lazy"></a></div>
+              <div class="col-6 col-md-4 col-lg-3"><a href="img/filme/fotos/tunesquad2.jpg" class="foto" data-lightbox><img src="img/filme/fotos/tunesquad2.jpg" alt="Gaguinho fica bravo." loading="lazy"></a></div>
+              <div class="col-6 col-md-4 col-lg-3"><a href="img/filme/fotos/tunesquad3.jpg" class="foto" data-lightbox><img src="img/filme/fotos/tunesquad3.jpg" alt="Taz perde a compostura." loading="lazy"></a></div>
+              <div class="col-6 col-md-4 col-lg-3"><a href="img/filme/fotos/tunesquad4.jpg" class="foto" data-lightbox><img src="img/filme/fotos/tunesquad4.jpg" alt="Patolino mostra que está com medo." loading="lazy"></a></div>
+              <div class="col-6 col-md-4 col-lg-3"><a href="img/filme/fotos/tunesquad5.jpg" class="foto" data-lightbox><img src="img/filme/fotos/tunesquad5.jpg" alt="Marvin, o Marciano, é o juiz do jogo." loading="lazy"></a></div>
+              <div class="col-6 col-md-4 col-lg-3"><a href="img/filme/fotos/tunesquad6.jpg" class="foto" data-lightbox><img src="img/filme/fotos/tunesquad6.jpg" alt="Sniffles é esmagado." loading="lazy"></a></div>
+              <div class="col-6 col-md-4 col-lg-3"><a href="img/filme/fotos/tunesquad7.jpg" class="foto" data-lightbox><img src="img/filme/fotos/tunesquad7.jpg" alt="Eufrazino e Hortelino fazem mira." loading="lazy"></a></div>
+              <div class="col-6 col-md-4 col-lg-3"><a href="img/filme/fotos/tunesquad8.jpg" class="foto" data-lightbox><img src="img/filme/fotos/tunesquad8.jpg" alt="Lola Bunny torce pelo time." loading="lazy"></a></div>
+              <div class="col-6 col-md-4 col-lg-3"><a href="img/filme/fotos/tunesquad9.jpg" class="foto" data-lightbox><img src="img/filme/fotos/tunesquad9.jpg" alt="Piu-Piu morde a orelha do adversário Zilch." loading="lazy"></a></div>
+              <div class="col-6 col-md-4 col-lg-3"><a href="img/filme/fotos/jordan3.jpg" class="foto" data-lightbox><img src="img/filme/fotos/jordan3.jpg" alt="Michael Jordan dá uma mãozinha na quadra." loading="lazy"></a></div>
+            </div>
+          </div>
+
+          <!-- Os vilões -->
+          <div class="tab-pane fade" id="fotos-monstars" role="tabpanel">
+            <div class="row g-3">
+              <div class="col-6 col-md-4 col-lg-3"><a href="img/filme/fotos/monstar1.jpg" class="foto" data-lightbox><img src="img/filme/fotos/monstar1.jpg" alt="Void, o Monstar, se aquece para o jogo." loading="lazy"></a></div>
+              <div class="col-6 col-md-4 col-lg-3"><a href="img/filme/fotos/monstar2.jpg" class="foto" data-lightbox><img src="img/filme/fotos/monstar2.jpg" alt="Zilch, o Monstar, leva um tomate merecido." loading="lazy"></a></div>
+              <div class="col-6 col-md-4 col-lg-3"><a href="img/filme/fotos/monstar3.jpg" class="foto" data-lightbox><img src="img/filme/fotos/monstar3.jpg" alt="Void, Zilch e Null se juntam contra o Piu-Piu. Não se preocupe, tudo acaba bem." loading="lazy"></a></div>
+              <div class="col-6 col-md-4 col-lg-3"><a href="img/filme/fotos/monstar4.jpg" class="foto" data-lightbox><img src="img/filme/fotos/monstar4.jpg" alt="Void, o Nerdluck, no palco." loading="lazy"></a></div>
+              <div class="col-6 col-md-4 col-lg-3"><a href="img/filme/fotos/monstar5.jpg" class="foto" data-lightbox><img src="img/filme/fotos/monstar5.jpg" alt="Zilch, o Monstar, num momento tenso." loading="lazy"></a></div>
+              <div class="col-6 col-md-4 col-lg-3"><a href="img/filme/fotos/monstar6.jpg" class="foto" data-lightbox><img src="img/filme/fotos/monstar6.jpg" alt="Null, o Monstar, se prepara para o jogo." loading="lazy"></a></div>
+              <div class="col-6 col-md-4 col-lg-3"><a href="img/filme/fotos/monstar7.jpg" class="foto" data-lightbox><img src="img/filme/fotos/monstar7.jpg" alt="Swackhammer, o chefe dos Monstars, dá uma bronca antes do jogo." loading="lazy"></a></div>
+              <div class="col-6 col-md-4 col-lg-3"><a href="img/filme/fotos/monstar8.jpg" class="foto" data-lightbox><img src="img/filme/fotos/monstar8.jpg" alt="Os Monstars (da esquerda para a direita): Null, Void, Bupkus e Zilch." loading="lazy"></a></div>
+              <div class="col-6 col-md-4 col-lg-3"><a href="img/filme/fotos/monstar9.jpg" class="foto" data-lightbox><img src="img/filme/fotos/monstar9.jpg" alt="Bupkus sorri para a câmera." loading="lazy"></a></div>
+              <div class="col-6 col-md-4 col-lg-3"><a href="img/filme/fotos/jordan1.jpg" class="foto" data-lightbox><img src="img/filme/fotos/jordan1.jpg" alt="Michael Jordan no banco de reservas do beisebol." loading="lazy"></a></div>
+            </div>
+          </div>
+
+          <!-- Tela verde -->
+          <div class="tab-pane fade" id="fotos-green" role="tabpanel">
+            <div class="row g-3">
+              <div class="col-6 col-md-4 col-lg-3"><a href="img/filme/fotos/green1.jpg" class="foto" data-lightbox><img src="img/filme/fotos/green1.jpg" alt="Jordan dribla pela quadra de tela verde." loading="lazy"></a></div>
+              <div class="col-6 col-md-4 col-lg-3"><a href="img/filme/fotos/green2.jpg" class="foto" data-lightbox><img src="img/filme/fotos/green2.jpg" alt="Jordan parte para a cesta numa cena de tela verde." loading="lazy"></a></div>
+              <div class="col-6 col-md-4 col-lg-3"><a href="img/filme/fotos/green3.jpg" class="foto" data-lightbox><img src="img/filme/fotos/green3.jpg" alt="Jordan, com uniforme de beisebol, tira o boné." loading="lazy"></a></div>
+              <div class="col-6 col-md-4 col-lg-3"><a href="img/filme/fotos/green4.jpg" class="foto" data-lightbox><img src="img/filme/fotos/green4.jpg" alt="Jordan joga contra homens vestidos de verde, que serão apagados na pós-produção e trocados por personagens animados." loading="lazy"></a></div>
+              <div class="col-6 col-md-4 col-lg-3"><a href="img/filme/fotos/green5.jpg" class="foto" data-lightbox><img src="img/filme/fotos/green5.jpg" alt="Wayne Knight (Stan) e Michael Jordan diante da tela verde." loading="lazy"></a></div>
+              <div class="col-6 col-md-4 col-lg-3"><a href="img/filme/fotos/green6.jpg" class="foto" data-lightbox><img src="img/filme/fotos/green6.jpg" alt="Jordan gravando cenas de tela verde." loading="lazy"></a></div>
+              <div class="col-6 col-md-4 col-lg-3"><a href="img/filme/fotos/green7.jpg" class="foto" data-lightbox><img src="img/filme/fotos/green7.jpg" alt="Jordan joga contra homenzinhos verdes, que depois foram apagados e trocados por personagens animados." loading="lazy"></a></div>
+              <div class="col-6 col-md-4 col-lg-3"><a href="img/filme/fotos/green8.jpg" class="foto" data-lightbox><img src="img/filme/fotos/green8.jpg" alt="Jordan reage a um personagem animado que não está ali de verdade." loading="lazy"></a></div>
+              <div class="col-6 col-md-4 col-lg-3"><a href="img/filme/fotos/green9.jpg" class="foto" data-lightbox><img src="img/filme/fotos/green9.jpg" alt="Jordan sorri para um close diante da tela verde." loading="lazy"></a></div>
+              <div class="col-6 col-md-4 col-lg-3"><a href="img/filme/fotos/jordan4.jpg" class="foto" data-lightbox><img src="img/filme/fotos/jordan4.jpg" alt="Michael Jordan e o seu carro." loading="lazy"></a></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== RODAPÉ (igual em todas as páginas) ==================== -->
+  <footer class="rodape">
+    <!-- Mapa do site: preenchido pelo js/script.js (parte 4) -->
+    <nav id="mapa" class="mapa-rodape" aria-label="Mapa do site"></nav>
+    <p class="mb-2">
+      <a href="https://www.spacejam.com/1996/" target="_blank" rel="noopener">Site original de 1996 <span aria-hidden="true">↗</span></a>
+    </p>
+    <p class="mb-1">SPACE JAM, personagens, nomes e elementos relacionados são marcas registradas da Warner Bros. &copy; 1996.</p>
+    <p class="mb-0">Versão remasterizada feita como trabalho acadêmico de Introdução ao Desenvolvimento Web, sem fins comerciais.</p>
+  </footer>
+
+  <button type="button" class="btn-topo" aria-label="Voltar ao topo">&#9650;</button>
+
+  <!-- Janela do lightbox: mostra a foto ampliada (controlada pelo js/script.js) -->
+  <div class="modal fade" id="lightbox" tabindex="-1" aria-label="Foto ampliada" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header border-0 pb-0">
+          <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body text-center">
+          <img class="lightbox-imagem" alt="">
+          <p class="lightbox-legenda mt-3 mb-0"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 (JS) e scripts do site -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

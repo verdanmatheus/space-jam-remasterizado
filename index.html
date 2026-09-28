@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Space Jam</title>
+  <meta name="description" content="Space Jam (1996): o site oficial do filme, remasterizado.">
+  <link rel="icon" href="img/comum/littlelogo.png">
+  <!-- Bootstrap 5 (CSS), salvo no projeto: funciona sem internet -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Estilo do site: vem depois do Bootstrap para poder sobrescrever -->
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<!-- Home: tema padrão, fundo de estrelas com nebulosa e cintilar (css/style.css, seção 5) -->
+<body class="home">
+
+  <!-- ==================== MENU (igual em todas as páginas) ====================
+       Se mudar o menu, mude em TODAS as páginas (no VS Code: Ctrl+Shift+H).
+       Na página atual, o link da seção recebe class="active". -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-sj sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="img/comum/littlelogo.png" alt="Space Jam: voltar ao início" width="70" height="60">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu-principal"
+        aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu-principal">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Início</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">O Filme</a>
+            <ul class="dropdown-menu">
+              <li><h6 class="dropdown-header">Jam Central</h6></li>
+              <li><a class="dropdown-item" href="filme.html">Visão geral</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="filme.html#producao">Notas de Produção</a></li>
+              <li><a class="dropdown-item" href="filme.html#cineastas">Os Cineastas</a></li>
+              <li><a class="dropdown-item" href="filme.html#trailer">Trailer</a></li>
+              <li><a class="dropdown-item" href="filme.html#fotos">Fotos do Filme</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Elenco</a>
+            <ul class="dropdown-menu">
+              <li><h6 class="dropdown-header">The Lineup</h6></li>
+              <li><a class="dropdown-item" href="elenco.html">Visão geral</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="elenco.html#looney-tunes">Looney Tunes</a></li>
+              <li><a class="dropdown-item" href="elenco.html#jogadores">Jogadores da NBA</a></li>
+              <li><a class="dropdown-item" href="elenco.html#atores">Atores</a></li>
+              <li><a class="dropdown-item" href="elenco.html#viloes">Os Vilões</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Bastidores</a>
+            <ul class="dropdown-menu">
+              <li><h6 class="dropdown-header">Behind the Jam</h6></li>
+              <li><a class="dropdown-item" href="bastidores.html">Visão geral</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="bastidores.html#personagens">Criação dos Personagens</a></li>
+              <li><a class="dropdown-item" href="bastidores.html#esbocos">Esboços da Animação</a></li>
+              <li><a class="dropdown-item" href="bastidores.html#making-of">Imagens do Set</a></li>
+              <li><a class="dropdown-item" href="bastidores.html#tecnica">Notas Técnicas</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Trilha Sonora</a>
+            <ul class="dropdown-menu">
+              <li><h6 class="dropdown-header">Lunar Tunes</h6></li>
+              <li><a class="dropdown-item" href="trilha.html">Visão geral</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="trilha.html#faixas">As Músicas</a></li>
+              <li><a class="dropdown-item" href="trilha.html#destaques">Artistas em Destaque</a></li>
+              <li><a class="dropdown-item" href="trilha.html#radio">No Rádio</a></li>
+              <li><a class="dropdown-item" href="trilha.html#frases">Frases do Filme</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Jogos</a>
+            <ul class="dropdown-menu dropdown-menu-lg-end">
+              <li><h6 class="dropdown-header">Junior Jam</h6></li>
+              <li><a class="dropdown-item" href="jogos.html">Visão geral</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="jogos.html#quiz">Quiz dos Looney Tunes</a></li>
+              <li><a class="dropdown-item" href="jogos.html#monstars">Match the Monstars</a></li>
+              <li><a class="dropdown-item" href="jogos.html#dicas">Dicas de Basquete</a></li>
+              <li><a class="dropdown-item" href="jogos.html#colorir">Livro de Colorir</a></li>
+              <li><a class="dropdown-item" href="jogos.html#fotos">Coisas Legais para Ver</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ==================== BOAS-VINDAS E PLANETAS ====================
+         Posição dos planetas no desktop: css/style.css, seção 5
+         (grid-template-areas). No celular, seguem a ordem deste HTML. -->
+    <div class="container text-center">
+      <h1 class="boas-vindas">Bem-vindo ao Space Jam!</h1>
+      <p class="boas-vindas-texto">Clique em um planeta para explorar.</p>
+
+      <nav class="orbita" aria-label="Seções do site">
+        <div class="logo">
+          <img src="img/home/p-jamlogo.png" alt="Space Jam" width="272" height="165">
+        </div>
+
+        <a class="planeta jamcentral" href="filme.html">
+          <img src="img/home/icone-jamcentral.png" alt="Jam Central" width="76" height="76">
+          <span class="planeta-nome">O Filme</span>
+        </a>
+        <a class="planeta lineup" href="elenco.html">
+          <img src="img/home/icone-lineup.png" alt="The Lineup" width="132" height="84">
+          <span class="planeta-nome">Elenco</span>
+        </a>
+        <a class="planeta behind" href="bastidores.html">
+          <img src="img/home/icone-behind.png" alt="Behind the Jam" width="77" height="76">
+          <span class="planeta-nome">Bastidores</span>
+        </a>
+        <a class="planeta lunar" href="trilha.html">
+          <img src="img/home/icone-lunartunes.png" alt="Lunar Tunes" width="122" height="84">
+          <span class="planeta-nome">Trilha Sonora</span>
+        </a>
+        <a class="planeta junior" href="jogos.html">
+          <img src="img/home/icone-junior.png" alt="Junior Jam" width="75" height="76">
+          <span class="planeta-nome">Jogos</span>
+        </a>
+        <a class="planeta bball" href="elenco.html#jogadores">
+          <img src="img/home/icone-bball.png" alt="Planet B-Ball" width="80" height="76">
+          <span class="planeta-nome">Jogadores da NBA</span>
+        </a>
+      </nav>
+
+      <!-- Planetas que levam para fora do site (abrem em nova aba) -->
+      <nav class="arquivo-1996" aria-label="Do site de 1996">
+        <span class="arquivo-titulo">Do site de 1996 <span aria-hidden="true">↗</span></span>
+        <a href="https://www.spacejam.com/1996/cmp/pressbox/pressboxframes.html" target="_blank" rel="noopener">
+          <img src="img/home/icone-pressbox.png" alt="" width="51" height="26">Press Box<span class="visually-hidden"> (abre em nova aba)</span>
+        </a>
+        <a href="https://www.spacejam.com/1996/cmp/jump/jumpframes.html" target="_blank" rel="noopener">
+          <img src="img/home/icone-jump.png" alt="" width="26" height="26">Jump Station<span class="visually-hidden"> (abre em nova aba)</span>
+        </a>
+        <a href="https://www.spacejam.com/1996/cmp/souvenirs/souvenirsframes.html" target="_blank" rel="noopener">
+          <img src="img/home/icone-souvenirs.png" alt="" width="27" height="26">Souvenirs<span class="visually-hidden"> (abre em nova aba)</span>
+        </a>
+        <a href="https://shop.looneytunes.com/spacejam96" target="_blank" rel="noopener">
+          <img src="img/home/icone-studiostore.png" alt="" width="26" height="26">Loja<span class="visually-hidden"> (abre em nova aba)</span>
+        </a>
+      </nav>
+    </div>
+
+    <!-- ==================== COMECE POR AQUI ====================
+         Faixa própria, com fundo escuro. O card inteiro é clicável
+         (classe stretched-link do Bootstrap). -->
+    <section class="destaques" aria-labelledby="titulo-destaques">
+      <div class="container">
+        <h2 id="titulo-destaques" class="titulo-texto">Comece por aqui</h2>
+        <p class="destaques-texto">O melhor do site em um clique</p>
+        <div class="row g-3">
+          <div class="col-6 col-lg-3">
+            <div class="card destaque">
+              <img src="img/jogos/fotos/ns2.jpg" class="destaque-imagem" alt="" width="720" height="432">
+              <div class="card-body">
+                <a href="filme.html#trailer" class="stretched-link">Assista ao trailer</a>
+                <small>O Filme</small>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="card destaque">
+              <img src="img/jogos/fotos/ns3.jpg" class="destaque-imagem" alt="" width="720" height="432">
+              <div class="card-body">
+                <a href="jogos.html#quiz" class="stretched-link">Quiz dos Looney Tunes</a>
+                <small>Jogos</small>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="card destaque">
+              <img src="img/jogos/fotos/ns5.jpg" class="destaque-imagem" alt="" width="720" height="432">
+              <div class="card-body">
+                <a href="jogos.html#monstars" class="stretched-link">Match the Monstars</a>
+                <small>Jogos</small>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="card destaque">
+              <img src="img/jogos/fotos/ns1.jpg" class="destaque-imagem" alt="" width="720" height="432">
+              <div class="card-body">
+                <a href="filme.html#fotos" class="stretched-link">60 fotos do filme</a>
+                <small>O Filme</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== RODAPÉ (igual em todas as páginas) ==================== -->
+  <footer class="rodape">
+    <!-- Mapa do site: preenchido pelo js/script.js (parte 4) -->
+    <nav id="mapa" class="mapa-rodape" aria-label="Mapa do site"></nav>
+    <p class="mb-2">
+      <a href="https://www.spacejam.com/1996/" target="_blank" rel="noopener">Site original de 1996 <span aria-hidden="true">↗</span></a>
+    </p>
+    <p class="mb-1">SPACE JAM, personagens, nomes e elementos relacionados são marcas registradas da Warner Bros. &copy; 1996.</p>
+    <p class="mb-0">Versão remasterizada feita como trabalho acadêmico de Introdução ao Desenvolvimento Web, sem fins comerciais.</p>
+  </footer>
+
+  <button type="button" class="btn-topo" aria-label="Voltar ao topo">&#9650;</button>
+
+  <!-- Bootstrap 5 (JS) e scripts do site -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

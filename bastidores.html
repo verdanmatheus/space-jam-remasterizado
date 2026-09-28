@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Behind the Jam | Space Jam</title>
+  <meta name="description" content="Behind the Jam: criação dos personagens, esboços da animação e técnicas de Space Jam (1996).">
+  <link rel="icon" href="img/comum/littlelogo.png">
+  <!-- Bootstrap 5 (CSS), salvo no projeto: funciona sem internet -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Estilo do site: vem depois do Bootstrap para poder sobrescrever -->
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<!-- Tema do Behind the Jam (cores no css/style.css, seção 1) -->
+<body class="tema-behind">
+
+  <!-- ==================== MENU (igual em todas as páginas) ====================
+       Se mudar o menu, mude em TODAS as páginas (no VS Code: Ctrl+Shift+H).
+       Na página atual, o link da seção recebe class="active". -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-sj sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="img/comum/littlelogo.png" alt="Space Jam: voltar ao início" width="70" height="60">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu-principal"
+        aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu-principal">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">O Filme</a>
+            <ul class="dropdown-menu">
+              <li><h6 class="dropdown-header">Jam Central</h6></li>
+              <li><a class="dropdown-item" href="filme.html">Visão geral</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="filme.html#producao">Notas de Produção</a></li>
+              <li><a class="dropdown-item" href="filme.html#cineastas">Os Cineastas</a></li>
+              <li><a class="dropdown-item" href="filme.html#trailer">Trailer</a></li>
+              <li><a class="dropdown-item" href="filme.html#fotos">Fotos do Filme</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Elenco</a>
+            <ul class="dropdown-menu">
+              <li><h6 class="dropdown-header">The Lineup</h6></li>
+              <li><a class="dropdown-item" href="elenco.html">Visão geral</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="elenco.html#looney-tunes">Looney Tunes</a></li>
+              <li><a class="dropdown-item" href="elenco.html#jogadores">Jogadores da NBA</a></li>
+              <li><a class="dropdown-item" href="elenco.html#atores">Atores</a></li>
+              <li><a class="dropdown-item" href="elenco.html#viloes">Os Vilões</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" aria-current="page" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Bastidores</a>
+            <ul class="dropdown-menu">
+              <li><h6 class="dropdown-header">Behind the Jam</h6></li>
+              <li><a class="dropdown-item" href="bastidores.html">Visão geral</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="bastidores.html#personagens">Criação dos Personagens</a></li>
+              <li><a class="dropdown-item" href="bastidores.html#esbocos">Esboços da Animação</a></li>
+              <li><a class="dropdown-item" href="bastidores.html#making-of">Imagens do Set</a></li>
+              <li><a class="dropdown-item" href="bastidores.html#tecnica">Notas Técnicas</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Trilha Sonora</a>
+            <ul class="dropdown-menu">
+              <li><h6 class="dropdown-header">Lunar Tunes</h6></li>
+              <li><a class="dropdown-item" href="trilha.html">Visão geral</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="trilha.html#faixas">As Músicas</a></li>
+              <li><a class="dropdown-item" href="trilha.html#destaques">Artistas em Destaque</a></li>
+              <li><a class="dropdown-item" href="trilha.html#radio">No Rádio</a></li>
+              <li><a class="dropdown-item" href="trilha.html#frases">Frases do Filme</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Jogos</a>
+            <ul class="dropdown-menu dropdown-menu-lg-end">
+              <li><h6 class="dropdown-header">Junior Jam</h6></li>
+              <li><a class="dropdown-item" href="jogos.html">Visão geral</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="jogos.html#quiz">Quiz dos Looney Tunes</a></li>
+              <li><a class="dropdown-item" href="jogos.html#monstars">Match the Monstars</a></li>
+              <li><a class="dropdown-item" href="jogos.html#dicas">Dicas de Basquete</a></li>
+              <li><a class="dropdown-item" href="jogos.html#colorir">Livro de Colorir</a></li>
+              <li><a class="dropdown-item" href="jogos.html#fotos">Coisas Legais para Ver</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== CAPA ====================
+       Cenário do filme (--capa do tema, css/style.css), planeta, título,
+       texto e atalhos para as seções desta página. -->
+  <header class="capa">
+    <div class="container capa-conteudo">
+      <img src="img/home/icone-behind.png" class="capa-planeta" alt="" width="52" height="52">
+      <h1 class="capa-titulo">Bastidores</h1>
+      <p class="capa-texto">
+        Vá aos bastidores de um dos filmes mais ousados e tecnológicos já feitos. Veja os primeiros
+        esboços dos novos personagens! Descubra como Michael Jordan ganhou um beijão do Pernalonga! E veja
+        Jordan jogando basquete contra vários homens estranhos vestidos de verde, que nunca aparecem no filme!
+      </p>
+      <ul class="subnav capa-atalhos">
+        <li><a href="#personagens">Criação dos Personagens</a></li>
+        <li><a href="#esbocos">Esboços da Animação</a></li>
+        <li><a href="#making-of">Imagens do Set</a></li>
+        <li><a href="#tecnica">Notas Técnicas</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ==================== CRIAÇÃO DOS PERSONAGENS ====================
+         Uma aba (nav-pills) para cada Nerdluck, com 4 esboços cada. -->
+    <section id="personagens" class="secao">
+      <div class="container">
+        <h2 class="titulo-secao">
+          <img src="img/bastidores/b-development.gif" alt="Criação dos Personagens" width="255" height="85">
+        </h2>
+        <p class="intro">
+          Como se os Looney Tunes já não tivessem problemas suficientes, a Warner Bros. Feature Animation
+          criou um time novinho de vilões para infernizar a vida deles. Veja como eles ganharam vida.
+          Clique em um esboço para ampliar.
+        </p>
+
+        <ul class="nav nav-pills nav-pills-sj" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#esboco-bupkus" type="button" role="tab">Bupkus</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#esboco-nada" type="button" role="tab">Nada</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#esboco-null" type="button" role="tab">Null</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#esboco-void" type="button" role="tab">Void</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#esboco-zilch" type="button" role="tab">Zilch</button>
+          </li>
+        </ul>
+
+        <div class="tab-content conteudo-estreito">
+          <div class="tab-pane fade show active" id="esboco-bupkus" role="tabpanel">
+            <div class="row g-3">
+              <div class="col-6 col-md-3"><a href="img/bastidores/personagens/bupkus1big.png" class="foto desenho" data-lightbox><img src="img/bastidores/personagens/bupkus1big.png" alt="Esboço de Bupkus (1 de 4)" loading="lazy"></a></div>
+              <div class="col-6 col-md-3"><a href="img/bastidores/personagens/bupkus2big.png" class="foto desenho" data-lightbox><img src="img/bastidores/personagens/bupkus2big.png" alt="Esboço de Bupkus (2 de 4)" loading="lazy"></a></div>
+              <div class="col-6 col-md-3"><a href="img/bastidores/personagens/bupkus3big.png" class="foto desenho" data-lightbox><img src="img/bastidores/personagens/bupkus3big.png" alt="Esboço de Bupkus (3 de 4)" loading="lazy"></a></div>
+              <div class="col-6 col-md-3"><a href="img/bastidores/personagens/bupkus4big.png" class="foto desenho" data-lightbox><img src="img/bastidores/personagens/bupkus4big.png" alt="Esboço de Bupkus (4 de 4)" loading="lazy"></a></div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="esboco-nada" role="tabpanel">
+            <div class="row g-3">
+              <div class="col-6 col-md-3"><a href="img/bastidores/personagens/nada1big.png" class="foto desenho" data-lightbox><img src="img/bastidores/personagens/nada1big.png" alt="Esboço de Nada (1 de 4)" loading="lazy"></a></div>
+              <div class="col-6 col-md-3"><a href="img/bastidores/personagens/nada2big.png" class="foto desenho" data-lightbox><img src="img/bastidores/personagens/nada2big.png" alt="Esboço de Nada (2 de 4)" loading="lazy"></a></div>
+              <div class="col-6 col-md-3"><a href="img/bastidores/personagens/nada3big.png" class="foto desenho" data-lightbox><img src="img/bastidores/personagens/nada3big.png" alt="Esboço de Nada (3 de 4)" loading="lazy"></a></div>
+              <div class="col-6 col-md-3"><a href="img/bastidores/personagens/nada4big.png" class="foto desenho" data-lightbox><img src="img/bastidores/personagens/nada4big.png" alt="Esboço de Nada (4 de 4)" loading="lazy"></a></div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="esboco-null" role="tabpanel">
+            <div class="row g-3">
+              <div class="col-6 col-md-3"><a href="img/bastidores/personagens/null1big.png" class="foto desenho" data-lightbox><img src="img/bastidores/personagens/null1big.png" alt="Esboço de Null (1 de 4)" loading="lazy"></a></div>
+              <div class="col-6 col-md-3"><a href="img/bastidores/personagens/null2big.png" class="foto desenho" data-lightbox><img src="img/bastidores/personagens/null2big.png" alt="Esboço de Null (2 de 4)" loading="lazy"></a></div>
+              <div class="col-6 col-md-3"><a href="img/bastidores/personagens/null3big.png" class="foto desenho" data-lightbox><img src="img/bastidores/personagens/null3big.png" alt="Esboço de Null (3 de 4)" loading="lazy"></a></div>
+              <div class="col-6 col-md-3"><a href="img/bastidores/personagens/null4big.png" class="foto desenho" data-lightbox><img src="img/bastidores/personagens/null4big.png" alt="Esboço de Null (4 de 4)" loading="lazy"></a></div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="esboco-void" role="tabpanel">
+            <div class="row g-3">
+              <div class="col-6 col-md-3"><a href="img/bastidores/personagens/void1big.png" class="foto desenho" data-lightbox><img src="img/bastidores/personagens/void1big.png" alt="Esboço de Void (1 de 4)" loading="lazy"></a></div>
+              <div class="col-6 col-md-3"><a href="img/bastidores/personagens/void2big.png" class="foto desenho" data-lightbox><img src="img/bastidores/personagens/void2big.png" alt="Esboço de Void (2 de 4)" loading="lazy"></a></div>
+              <div class="col-6 col-md-3"><a href="img/bastidores/personagens/void3big.png" class="foto desenho" data-lightbox><img src="img/bastidores/personagens/void3big.png" alt="Esboço de Void (3 de 4)" loading="lazy"></a></div>
+              <div class="col-6 col-md-3"><a href="img/bastidores/personagens/void4big.png" class="foto desenho" data-lightbox><img src="img/bastidores/personagens/void4big.png" alt="Esboço de Void (4 de 4)" loading="lazy"></a></div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="esboco-zilch" role="tabpanel">
+            <div class="row g-3">
+              <div class="col-6 col-md-3"><a href="img/bastidores/personagens/zilch1big.png" class="foto desenho" data-lightbox><img src="img/bastidores/personagens/zilch1big.png" alt="Esboço de Zilch (1 de 4)" loading="lazy"></a></div>
+              <div class="col-6 col-md-3"><a href="img/bastidores/personagens/zilch2big.png" class="foto desenho" data-lightbox><img src="img/bastidores/personagens/zilch2big.png" alt="Esboço de Zilch (2 de 4)" loading="lazy"></a></div>
+              <div class="col-6 col-md-3"><a href="img/bastidores/personagens/zilch3big.png" class="foto desenho" data-lightbox><img src="img/bastidores/personagens/zilch3big.png" alt="Esboço de Zilch (3 de 4)" loading="lazy"></a></div>
+              <div class="col-6 col-md-3"><a href="img/bastidores/personagens/zilch4big.png" class="foto desenho" data-lightbox><img src="img/bastidores/personagens/zilch4big.png" alt="Esboço de Zilch (4 de 4)" loading="lazy"></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ESBOÇOS DA ANIMAÇÃO ====================
+         Uma aba (nav-pills) para cada sequência. Nas sequências "passo a
+         passo", cada passo é um item da lista <ol class="passos">: o número
+         aparece sozinho (CSS). -->
+    <section id="esbocos" class="secao">
+      <div class="container">
+        <h2 class="titulo-secao">
+          <img src="img/bastidores/b-sketches.gif" alt="Esboços da Animação" width="434" height="51">
+        </h2>
+        <p class="intro">
+          Bolas de golfe rodopiam em volta da cabeça de Michael Jordan quando ele acorda na Terra dos Looney
+          Tunes. Táxis de jornal e flores de celofane por todo lado. Escolha uma das sequências abaixo.
+        </p>
+
+        <ul class="nav nav-pills nav-pills-sj" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#esboco-golfe" type="button" role="tab">Bolas de golfe</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#esboco-samfudd" type="button" role="tab">Hortelino e Eufrazino</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#esboco-cenarios" type="button" role="tab">Cenários</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#esboco-lola" type="button" role="tab">Lola Bunny</button>
+          </li>
+        </ul>
+
+        <div class="tab-content conteudo-estreito">
+
+          <!-- Sequência 1: bolas de golfe (passo a passo) -->
+          <div class="tab-pane fade show active" id="esboco-golfe" role="tabpanel">
+            <p class="legenda-aba"><b>Michael se recupera de uma queda feia.</b> Veja, passo a passo, como foi feita a cena das bolas de golfe girando em volta da cabeça dele. Clique para ampliar.</p>
+            <ol class="passos row row-cols-2 row-cols-md-3 g-3">
+              <li class="col">
+                <a href="img/bastidores/esbocos/anim1.png" class="foto desenho" data-lightbox><img src="img/bastidores/esbocos/anim1.png" alt="Passo 1: Jordan diante da tela verde" loading="lazy"></a>
+                <p class="passo-texto">Michael é filmado diante de uma tela verde, que depois é trocada por um cenário. Os pontos atrás da cabeça servem de referência para os artistas de computação.</p>
+              </li>
+              <li class="col">
+                <a href="img/bastidores/esbocos/anim2.png" class="foto desenho" data-lightbox><img src="img/bastidores/esbocos/anim2.png" alt="Passo 2: rascunho das bolas de golfe" loading="lazy"></a>
+                <p class="passo-texto">Os animadores desenham um rascunho das bolas de golfe voando.</p>
+              </li>
+              <li class="col">
+                <a href="img/bastidores/esbocos/anim3.png" class="foto desenho" data-lightbox><img src="img/bastidores/esbocos/anim3.png" alt="Passo 3: rascunho das sombras" loading="lazy"></a>
+                <p class="passo-texto">Também são feitos rascunhos das sombras das bolas, para dar volume a elas.</p>
+              </li>
+              <li class="col">
+                <a href="img/bastidores/esbocos/anim4.png" class="foto desenho" data-lightbox><img src="img/bastidores/esbocos/anim4.png" alt="Passo 4: bolas de golfe com traço final" loading="lazy"></a>
+                <p class="passo-texto">As bolas ganham o traço final ("clean-up")...</p>
+              </li>
+              <li class="col">
+                <a href="img/bastidores/esbocos/anim5.png" class="foto desenho" data-lightbox><img src="img/bastidores/esbocos/anim5.png" alt="Passo 5: sombras com traço final" loading="lazy"></a>
+                <p class="passo-texto">...e as sombras também.</p>
+              </li>
+              <li class="col">
+                <a href="img/bastidores/esbocos/anim6.jpg" class="foto desenho" data-lightbox><img src="img/bastidores/esbocos/anim6.jpg" alt="Passo 6: a cena final" loading="lazy"></a>
+                <p class="passo-texto">Os desenhos são pintados no computador e combinados com o cenário e a filmagem de Michael.</p>
+              </li>
+            </ol>
+          </div>
+
+          <!-- Sequência 2: Hortelino e Eufrazino (passo a passo) -->
+          <div class="tab-pane fade" id="esboco-samfudd" role="tabpanel">
+            <p class="legenda-aba"><b>Hortelino e Eufrazino, ou seriam Jules e Vincent?</b> Durante o grande jogo, os dois fazem uma rápida homenagem a Quentin Tarantino (<i>Pulp Fiction</i>). Clique para ampliar.</p>
+            <ol class="passos row row-cols-2 row-cols-md-3 g-3">
+              <li class="col">
+                <a href="img/bastidores/esbocos/samfudd1.png" class="foto desenho" data-lightbox><img src="img/bastidores/esbocos/samfudd1.png" alt="Passo 1: Eufrazino olha para Hortelino" loading="lazy"></a>
+                <p class="passo-texto">Eufrazino olha para Hortelino...</p>
+              </li>
+              <li class="col">
+                <a href="img/bastidores/esbocos/samfudd2.png" class="foto desenho" data-lightbox><img src="img/bastidores/esbocos/samfudd2.png" alt="Passo 2: Hortelino olha para Eufrazino" loading="lazy"></a>
+                <p class="passo-texto">...Hortelino olha de volta para Eufrazino.</p>
+              </li>
+              <li class="col">
+                <a href="img/bastidores/esbocos/samfudd3.png" class="foto desenho" data-lightbox><img src="img/bastidores/esbocos/samfudd3.png" alt="Passo 3: Eufrazino mira o alvo" loading="lazy"></a>
+                <p class="passo-texto">Eufrazino mira o alvo...</p>
+              </li>
+              <li class="col">
+                <a href="img/bastidores/esbocos/samfudd4.png" class="foto desenho" data-lightbox><img src="img/bastidores/esbocos/samfudd4.png" alt="Passo 4: Hortelino mira o alvo" loading="lazy"></a>
+                <p class="passo-texto">...e Hortelino faz o mesmo.</p>
+              </li>
+              <li class="col">
+                <a href="img/bastidores/esbocos/samfudd5.png" class="foto desenho" data-lightbox><img src="img/bastidores/esbocos/samfudd5.png" alt="Passo 5: desenho dos canos das armas" loading="lazy"></a>
+                <p class="passo-texto">A visão em grande angular dos canos das armas é desenhada separadamente.</p>
+              </li>
+              <li class="col">
+                <a href="img/bastidores/esbocos/samfudd6.jpg" class="foto desenho" data-lightbox><img src="img/bastidores/esbocos/samfudd6.jpg" alt="Passo 6: a cena final" loading="lazy"></a>
+                <p class="passo-texto">Os desenhos são combinados com a quadra de basquete feita no computador.</p>
+              </li>
+            </ol>
+          </div>
+
+          <!-- Sequência 3: cenários -->
+          <div class="tab-pane fade" id="esboco-cenarios" role="tabpanel">
+            <p class="legenda-aba"><b>Cenários pintados e feitos no computador.</b> Com toda a atenção nos personagens, é fácil esquecer os belos cenários das sequências animadas. Clique para ampliar.</p>
+            <div class="row row-cols-2 row-cols-md-3 g-3">
+              <div class="col"><a href="img/bastidores/esbocos/scene1.jpg" class="foto" data-lightbox><img src="img/bastidores/esbocos/scene1.jpg" alt="Cenário do filme (1 de 6)" loading="lazy"></a></div>
+              <div class="col"><a href="img/bastidores/esbocos/scene2.jpg" class="foto" data-lightbox><img src="img/bastidores/esbocos/scene2.jpg" alt="Cenário do filme (2 de 6)" loading="lazy"></a></div>
+              <div class="col"><a href="img/bastidores/esbocos/scene3.jpg" class="foto" data-lightbox><img src="img/bastidores/esbocos/scene3.jpg" alt="Cenário do filme (3 de 6)" loading="lazy"></a></div>
+              <div class="col"><a href="img/bastidores/esbocos/scene4.jpg" class="foto" data-lightbox><img src="img/bastidores/esbocos/scene4.jpg" alt="Cenário do filme (4 de 6)" loading="lazy"></a></div>
+              <div class="col"><a href="img/bastidores/esbocos/scene5.jpg" class="foto" data-lightbox><img src="img/bastidores/esbocos/scene5.jpg" alt="Cenário do filme (5 de 6)" loading="lazy"></a></div>
+              <div class="col"><a href="img/bastidores/esbocos/scene6.jpg" class="foto" data-lightbox><img src="img/bastidores/esbocos/scene6.jpg" alt="Cenário do filme (6 de 6)" loading="lazy"></a></div>
+            </div>
+          </div>
+
+          <!-- Sequência 4: Lola Bunny -->
+          <div class="tab-pane fade" id="esboco-lola" role="tabpanel">
+            <p class="legenda-aba"><b>O visual da Lola Bunny.</b> Alguns dos muitos esboços e desenhos que deram forma à Lola. Clique para ampliar.</p>
+            <div class="row row-cols-2 row-cols-md-3 g-3">
+              <div class="col"><a href="img/bastidores/esbocos/lola1.jpg" class="foto desenho" data-lightbox><img src="img/bastidores/esbocos/lola1.jpg" alt="Esboço da Lola Bunny (1 de 6)" loading="lazy"></a></div>
+              <div class="col"><a href="img/bastidores/esbocos/lola2.jpg" class="foto desenho" data-lightbox><img src="img/bastidores/esbocos/lola2.jpg" alt="Esboço da Lola Bunny (2 de 6)" loading="lazy"></a></div>
+              <div class="col"><a href="img/bastidores/esbocos/lola3.jpg" class="foto desenho" data-lightbox><img src="img/bastidores/esbocos/lola3.jpg" alt="Esboço da Lola Bunny (3 de 6)" loading="lazy"></a></div>
+              <div class="col"><a href="img/bastidores/esbocos/lola4.jpg" class="foto desenho" data-lightbox><img src="img/bastidores/esbocos/lola4.jpg" alt="Esboço da Lola Bunny (4 de 6)" loading="lazy"></a></div>
+              <div class="col"><a href="img/bastidores/esbocos/lola5.jpg" class="foto desenho" data-lightbox><img src="img/bastidores/esbocos/lola5.jpg" alt="Esboço da Lola Bunny (5 de 6)" loading="lazy"></a></div>
+              <div class="col"><a href="img/bastidores/esbocos/lola6.jpg" class="foto desenho" data-lightbox><img src="img/bastidores/esbocos/lola6.jpg" alt="Esboço da Lola Bunny (6 de 6)" loading="lazy"></a></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== IMAGENS DO SET (b-roll) ==================== -->
+    <section id="making-of" class="secao">
+      <div class="container">
+        <h2 class="titulo-secao">
+          <img src="img/bastidores/b-behind.gif" alt="Imagens dos Bastidores" width="392" height="91">
+        </h2>
+        <p class="intro">
+          Não é fácil ser verde. Estas imagens foram gravadas por câmeras extras no set (o chamado "b-roll")
+          e mostram Michael Jordan jogando contra vários homens mais baixos e bem menos talentosos que ele.
+          Os homenzinhos verdes depois são apagados no computador e trocados por desenhos.
+        </p>
+        <p class="text-center mb-4">
+          <small>São os vídeos QuickTime originais de 1996 (<code>.mov</code>): clicando, o navegador baixa o arquivo.
+          Para ver como fica, confira as <a href="filme.html#fotos">fotos da tela verde</a>.</small>
+        </p>
+
+        <div class="row g-4 justify-content-center text-center video-antigo">
+          <div class="col-6 col-md-4 col-lg-2">
+            <a href="https://www.spacejam.com/1996/dld/broll1.mov" target="_blank" rel="noopener">
+              <img src="img/bastidores/broll1.png" alt="Vídeo do set 1" width="100" height="75">
+            </a>
+            <p class="small mt-2">Imagens do set 1<br><span class="tamanho-arquivo">download .mov, 1,8 MB</span></p>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+            <a href="https://www.spacejam.com/1996/dld/broll2.mov" target="_blank" rel="noopener">
+              <img src="img/bastidores/broll2.png" alt="Vídeo do set 2" width="100" height="75">
+            </a>
+            <p class="small mt-2">Imagens do set 2<br><span class="tamanho-arquivo">download .mov, 1,2 MB</span></p>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+            <a href="https://www.spacejam.com/1996/dld/featurette.mov" target="_blank" rel="noopener">
+              <img src="img/bastidores/featurette.png" alt="Making of de Space Jam" width="100" height="75">
+            </a>
+            <p class="small mt-2">Making of (2min45)<br><span class="tamanho-arquivo">download .mov, 8,7 MB</span></p>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+            <a href="https://www.spacejam.com/1996/dld/jordan.mov" target="_blank" rel="noopener">
+              <img src="img/bastidores/jordan.png" alt="Ivan Reitman fala sobre Michael Jordan" width="100" height="75">
+            </a>
+            <p class="small mt-2">Reitman fala sobre Jordan<br><span class="tamanho-arquivo">download .mov, 1,1 MB</span></p>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+            <a href="https://www.spacejam.com/1996/dld/genre.mov" target="_blank" rel="noopener">
+              <img src="img/bastidores/genre.png" alt="Ivan Reitman fala sobre o gênero do filme" width="100" height="75">
+            </a>
+            <p class="small mt-2">Reitman fala sobre o gênero<br><span class="tamanho-arquivo">download .mov, 1,2 MB</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== NOTAS TÉCNICAS ==================== -->
+    <section id="tecnica" class="secao">
+      <div class="container">
+        <h2 class="titulo-secao">
+          <img src="img/bastidores/b-tech.gif" alt="Notas Técnicas" width="229" height="47">
+        </h2>
+        <p class="intro">
+          Centenas de pessoas ao redor do mundo trabalharam juntas para colocar Michael Jordan na Terra dos
+          Looney Tunes. Este é um resumo do texto original de Bill Warren.
+        </p>
+
+        <div class="caixa-texto clearfix mb-4">
+          <img src="img/bastidores/tecnica/tech1.jpg" alt="Patolino e Michael" width="180" height="108" class="img-texto float-sm-start">
+          <p>
+            <b>Space Jam</b> foi o primeiro longa da história a combinar tanta animação tradicional,
+            live-action e computação gráfica 3D. Muita gente imagina que "animação por computador" é um
+            técnico digitando "Pernalonga" e "Patolino", escolhendo o cenário "Marte" e voltando uma hora
+            depois para buscar o desenho pronto.
+          </p>
+          <p class="mb-0">
+            Nada disso! O artista nunca sai de cena. Por mais que o computador trabalhe, <b>Space Jam</b>
+            começou com animadores desenhando alguns dos personagens mais famosos do mundo do jeito de
+            sempre: com lápis e papel.
+          </p>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+          <div class="col">
+            <div class="card card-sj">
+              <img src="img/bastidores/tecnica/tech2.jpg" class="card-imagem" alt="Michael Jordan" width="96" height="144">
+              <div class="card-body">
+                <h3 class="card-title h5">Vida real no mundo dos desenhos</h3>
+                <p class="card-text">
+                  Misturar gente de verdade e desenhos é quase tão antigo quanto a animação: passou por
+                  <i>Gertie, o Dinossauro</i>, pelas comédias da Alice de Walt Disney e por <i>Mary Poppins</i>
+                  (1964). Mas só <i>Uma Cilada para Roger Rabbit</i> (1988) fez isso do começo ao fim de um
+                  longa. <b>Space Jam</b> quis ir além.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card card-sj">
+              <img src="img/bastidores/tecnica/tech3.jpg" class="card-imagem" alt="Pernalonga" width="144" height="87">
+              <div class="card-body">
+                <h3 class="card-title h5">A tecnologia molda a arte</h3>
+                <p class="card-text">
+                  Logo no começo do filme, a câmera sobe de um telhado em miniatura para um céu feito no
+                  computador, entra no planeta dos Nerdlucks e termina numa cena de animação clássica, em 2D.
+                  Tudo no que parece um único movimento de câmera.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card card-sj">
+              <img src="img/bastidores/tecnica/tech4.jpg" class="card-imagem" alt="Michael contra os homens de verde" width="115" height="180">
+              <div class="card-body">
+                <h3 class="card-title h5">Ser verde</h3>
+                <p class="card-text">
+                  É quase impossível um ator olhar para um espaço vazio onde depois vai aparecer um pato
+                  falante. A solução: paredes verdes, chão verde e atores do grupo de improviso Groundlings
+                  vestidos de verde dos pés à cabeça, fazendo o papel dos personagens.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card card-sj">
+              <img src="img/bastidores/tecnica/tech5.jpg" class="card-imagem" alt="Michael com o Tune Squad" width="180" height="108">
+              <div class="card-body">
+                <h3 class="card-title h5">Para Sherman Oaks e além</h3>
+                <p class="card-text">
+                  Além das equipes da Warner em Sherman Oaks (Califórnia) e em Londres, estúdios de animação do
+                  mundo todo participaram. Os desenhos eram escaneados, pintados no programa Animo e enviados
+                  por fibra ótica para a Cinesite.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card card-sj">
+              <img src="img/bastidores/tecnica/tech6.jpg" class="card-imagem" alt="Michael e Pernalonga" width="180" height="109">
+              <div class="card-body">
+                <h3 class="card-title h5">Na Cinesite</h3>
+                <p class="card-text">
+                  Com o sistema Cineon, da Kodak, os artistas da Cinesite juntavam desenhos e filmagens. Em
+                  cada cena, uma "hero shot" definia o visual. Ela era aprovada por Ivan Reitman antes de ser
+                  aplicada às outras tomadas.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card card-sj">
+              <img src="img/bastidores/tecnica/tech7.jpg" class="card-imagem" alt="Frajola e Vovó" width="180" height="109">
+              <div class="card-body">
+                <h3 class="card-title h5">Na quadra de basquete</h3>
+                <p class="card-text">
+                  Nos desenhos clássicos, a perspectiva de um movimento de câmera tinha que ser desenhada à mão,
+                  trabalho de artista e de matemático. Em <b>Space Jam</b>, as paredes e o piso do ginásio foram
+                  criados inteiramente no computador, o que permitiu os movimentos de câmera de Joe Pytka.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card card-sj">
+              <img src="img/bastidores/tecnica/tech8.jpg" class="card-imagem" alt="Hortelino, Gaguinho e Eufrazino" width="180" height="108">
+              <div class="card-body">
+                <h3 class="card-title h5">Enchendo a arquibancada</h3>
+                <p class="card-text">
+                  A torcida do jogo tinha que ser toda de desenhos: 25 mil personagens! Como animar todos era
+                  impossível, a Cinesite duplicou personagens no computador e filmou pessoas reais fantasiadas,
+                  tratadas para parecerem "meio desenhadas".
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card card-sj">
+              <div class="card-body">
+                <h3 class="card-title h5">Distorcendo Michael Jordan</h3>
+                <p class="card-text">
+                  Jordan foi escaneado em 3D. Assim, ele podia ser esticado, espremido e até amassado em forma
+                  de bola de basquete. E, quando o Pernalonga dá um beijo nele, os lábios de Jordan foram
+                  levemente alterados no computador.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card card-sj">
+              <div class="card-body">
+                <h3 class="card-title h5">O artista está no sistema</h3>
+                <p class="card-text">
+                  No fim, o filme inteiro existia dentro dos computadores da Cinesite e voltou para a película
+                  por meio de lasers. Mas o computador não substituiu ninguém: "ele sempre foi uma ajuda para o
+                  artista", diz o codiretor de animação Bruce Smith.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== RODAPÉ (igual em todas as páginas) ==================== -->
+  <footer class="rodape">
+    <!-- Mapa do site: preenchido pelo js/script.js (parte 4) -->
+    <nav id="mapa" class="mapa-rodape" aria-label="Mapa do site"></nav>
+    <p class="mb-2">
+      <a href="https://www.spacejam.com/1996/" target="_blank" rel="noopener">Site original de 1996 <span aria-hidden="true">↗</span></a>
+    </p>
+    <p class="mb-1">SPACE JAM, personagens, nomes e elementos relacionados são marcas registradas da Warner Bros. &copy; 1996.</p>
+    <p class="mb-0">Versão remasterizada feita como trabalho acadêmico de Introdução ao Desenvolvimento Web, sem fins comerciais.</p>
+  </footer>
+
+  <button type="button" class="btn-topo" aria-label="Voltar ao topo">&#9650;</button>
+
+  <!-- Janela do lightbox: mostra a imagem ampliada (controlada pelo js/script.js) -->
+  <div class="modal fade" id="lightbox" tabindex="-1" aria-label="Imagem ampliada" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header border-0 pb-0">
+          <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body text-center">
+          <img class="lightbox-imagem" alt="">
+          <p class="lightbox-legenda mt-3 mb-0"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 (JS) e scripts do site -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

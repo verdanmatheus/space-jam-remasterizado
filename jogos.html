@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Junior Jam | Space Jam</title>
+  <meta name="description" content="Junior Jam: quiz, jogo dos Monstars, dicas de basquete e livro de colorir de Space Jam (1996).">
+  <link rel="icon" href="img/comum/littlelogo.png">
+  <!-- Bootstrap 5 (CSS), salvo no projeto: funciona sem internet -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Estilo do site: vem depois do Bootstrap para poder sobrescrever -->
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<!-- Tema da Junior Jam (cores no css/style.css, seção 1) -->
+<body class="tema-junior">
+
+  <!-- ==================== MENU (igual em todas as páginas) ====================
+       Se mudar o menu, mude em TODAS as páginas (no VS Code: Ctrl+Shift+H).
+       Na página atual, o link da seção recebe class="active". -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-sj sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="img/comum/littlelogo.png" alt="Space Jam: voltar ao início" width="70" height="60">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu-principal"
+        aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu-principal">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">O Filme</a>
+            <ul class="dropdown-menu">
+              <li><h6 class="dropdown-header">Jam Central</h6></li>
+              <li><a class="dropdown-item" href="filme.html">Visão geral</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="filme.html#producao">Notas de Produção</a></li>
+              <li><a class="dropdown-item" href="filme.html#cineastas">Os Cineastas</a></li>
+              <li><a class="dropdown-item" href="filme.html#trailer">Trailer</a></li>
+              <li><a class="dropdown-item" href="filme.html#fotos">Fotos do Filme</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Elenco</a>
+            <ul class="dropdown-menu">
+              <li><h6 class="dropdown-header">The Lineup</h6></li>
+              <li><a class="dropdown-item" href="elenco.html">Visão geral</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="elenco.html#looney-tunes">Looney Tunes</a></li>
+              <li><a class="dropdown-item" href="elenco.html#jogadores">Jogadores da NBA</a></li>
+              <li><a class="dropdown-item" href="elenco.html#atores">Atores</a></li>
+              <li><a class="dropdown-item" href="elenco.html#viloes">Os Vilões</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Bastidores</a>
+            <ul class="dropdown-menu">
+              <li><h6 class="dropdown-header">Behind the Jam</h6></li>
+              <li><a class="dropdown-item" href="bastidores.html">Visão geral</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="bastidores.html#personagens">Criação dos Personagens</a></li>
+              <li><a class="dropdown-item" href="bastidores.html#esbocos">Esboços da Animação</a></li>
+              <li><a class="dropdown-item" href="bastidores.html#making-of">Imagens do Set</a></li>
+              <li><a class="dropdown-item" href="bastidores.html#tecnica">Notas Técnicas</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Trilha Sonora</a>
+            <ul class="dropdown-menu">
+              <li><h6 class="dropdown-header">Lunar Tunes</h6></li>
+              <li><a class="dropdown-item" href="trilha.html">Visão geral</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="trilha.html#faixas">As Músicas</a></li>
+              <li><a class="dropdown-item" href="trilha.html#destaques">Artistas em Destaque</a></li>
+              <li><a class="dropdown-item" href="trilha.html#radio">No Rádio</a></li>
+              <li><a class="dropdown-item" href="trilha.html#frases">Frases do Filme</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" aria-current="page" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Jogos</a>
+            <ul class="dropdown-menu dropdown-menu-lg-end">
+              <li><h6 class="dropdown-header">Junior Jam</h6></li>
+              <li><a class="dropdown-item" href="jogos.html">Visão geral</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="jogos.html#quiz">Quiz dos Looney Tunes</a></li>
+              <li><a class="dropdown-item" href="jogos.html#monstars">Match the Monstars</a></li>
+              <li><a class="dropdown-item" href="jogos.html#dicas">Dicas de Basquete</a></li>
+              <li><a class="dropdown-item" href="jogos.html#colorir">Livro de Colorir</a></li>
+              <li><a class="dropdown-item" href="jogos.html#fotos">Coisas Legais para Ver</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== CAPA ====================
+       Cenário do filme (--capa do tema, css/style.css), planeta, título,
+       texto e atalhos para as seções desta página. -->
+  <header class="capa">
+    <div class="container capa-conteudo">
+      <img src="img/home/icone-junior.png" class="capa-planeta" alt="" width="45" height="46">
+      <h1 class="capa-titulo">Jogos</h1>
+      <p class="capa-texto">
+        Criançada! Muita diversão espera por vocês na Terra dos Looney Tunes: jogue o quiz, descubra
+        qual Monstar cada Nerdluck vira, aprenda dicas de basquete e imprima desenhos para colorir!
+      </p>
+      <ul class="subnav capa-atalhos">
+        <li><a href="#quiz">Quiz dos Looney Tunes</a></li>
+        <li><a href="#monstars">Match the Monstars</a></li>
+        <li><a href="#dicas">Dicas de Basquete</a></li>
+        <li><a href="#colorir">Livro de Colorir</a></li>
+        <li><a href="#fotos">Coisas Legais para Ver</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ==================== QUIZ ====================
+         Preenchido pelo js/jogos.js (perguntas na lista PERGUNTAS). -->
+    <section id="quiz" class="secao">
+      <div class="container">
+        <h2 class="titulo-secao">
+          <img src="img/jogos/b-quiz.gif" alt="Quiz de Curiosidades" width="280" height="50">
+        </h2>
+        <p class="intro">
+          Aposto que você nunca viu o episódio perdido em que o Coiote pega o Papa-Léguas e come ele.
+          Brincadeira, isso nunca aconteceu! Mas aqui você pode testar o que sabe sobre os Looney Tunes
+          no Quiz Oficial de <b>Space Jam</b>.
+        </p>
+
+        <div class="card card-sj jogo">
+          <div class="card-body p-4">
+            <p class="jogo-progresso">Pergunta <span id="quiz-numero">1</span> de <span id="quiz-total">6</span></p>
+            <h3 id="quiz-pergunta" class="jogo-pergunta mb-3">Carregando...</h3>
+            <div id="quiz-opcoes" class="d-grid gap-2"></div>
+            <div id="quiz-feedback" class="jogo-feedback" aria-live="polite"></div>
+            <div class="text-center">
+              <button type="button" id="quiz-proxima" class="btn btn-sj btn-lg d-none">Próxima pergunta</button>
+            </div>
+            <noscript><p class="mt-3">Ative o JavaScript no navegador para jogar.</p></noscript>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== MATCH THE MONSTARS ====================
+         Lógica no js/jogos.js (lista RODADAS). O data-monstar de cada botão
+         é o nome que o JS compara. -->
+    <section id="monstars" class="secao">
+      <div class="container">
+        <h2 class="titulo-secao">
+          <img src="img/jogos/g-match.png" alt="Match the Monstars" width="401" height="27">
+        </h2>
+        <p class="intro">
+          Tiramos a cor dos Nerdlucks, aqueles baixinhos que aparecem em <b>Space Jam</b>. A sua missão é
+          descobrir em qual Monstar cada um se transforma. Acertou? Você vê a animação da transformação!
+        </p>
+
+        <div class="card card-sj jogo">
+          <div class="card-body p-4">
+            <p class="jogo-progresso">Nerdluck <span id="match-numero">1</span> de <span id="match-total">5</span></p>
+            <div class="row align-items-center g-3 mb-3">
+              <div class="col-12 col-sm-4 text-center">
+                <img id="match-nerdluck" src="img/jogos/monstars/nerdluck1.png" alt="Nerdluck sem cor">
+              </div>
+              <div class="col-12 col-sm-8">
+                <p class="mb-0">Em qual Monstar este Nerdluck se transforma? Clique no Monstar certo!</p>
+              </div>
+            </div>
+
+            <div id="match-opcoes" class="d-flex flex-wrap justify-content-center align-items-end gap-2">
+              <button type="button" class="btn-monstar" data-monstar="null">
+                <img src="img/jogos/monstars/nullstar.png" alt="Monstar Null" width="117" height="144">
+              </button>
+              <button type="button" class="btn-monstar" data-monstar="zilch">
+                <img src="img/jogos/monstars/zilchstar.png" alt="Monstar Zilch" width="140" height="144">
+              </button>
+              <button type="button" class="btn-monstar" data-monstar="void">
+                <img src="img/jogos/monstars/voidstar.png" alt="Monstar Void" width="60" height="144">
+              </button>
+              <button type="button" class="btn-monstar" data-monstar="nada">
+                <img src="img/jogos/monstars/nadastar.png" alt="Monstar Nada" width="195" height="144">
+              </button>
+              <button type="button" class="btn-monstar" data-monstar="bupkus">
+                <img src="img/jogos/monstars/bupkustar.png" alt="Monstar Bupkus" width="131" height="144">
+              </button>
+            </div>
+
+            <div id="match-feedback" class="jogo-feedback" aria-live="polite"></div>
+            <div class="text-center">
+              <button type="button" id="match-proximo" class="btn btn-sj btn-lg d-none">Próximo Nerdluck</button>
+            </div>
+            <noscript><p class="mt-3">Ative o JavaScript no navegador para jogar.</p></noscript>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== DICAS DE BASQUETE ==================== -->
+    <section id="dicas" class="secao">
+      <div class="container">
+        <h2 class="titulo-secao">
+          <img src="img/jogos/b-tips.gif" alt="Dicas de Basquete" width="274" height="85">
+        </h2>
+        <p class="intro">
+          Você sabe jogar basquete tão bem quanto o Michael Jordan? Se ler estas dicas, vai saber! Ou talvez
+          não. De qualquer jeito, vale a pena treinar.
+        </p>
+
+        <div class="caixa-texto">
+          <ol class="mb-3">
+            <li class="mb-2">Sempre aqueça antes dos jogos: alongue-se e faça exercícios leves.</li>
+            <li class="mb-2">Treine o drible com as duas mãos. Coloque 4 ou 5 cones a mais ou menos 1,2 m um do outro e drible em zigue-zague, trocando de mão a cada cone. Comece devagar e vá aumentando a velocidade.</li>
+            <li class="mb-2">Mantenha a cabeça erguida ao driblar. Quem dribla sem olhar para a bola encontra um companheiro livre com mais facilidade.</li>
+            <li class="mb-2">Na defesa, deslize de um lado para o outro para marcar o adversário. Não cruze as pernas.</li>
+            <li class="mb-2">Ao driblar, mantenha a outra mão levantada: isso ajuda no equilíbrio e facilita trocar de mão.</li>
+            <li class="mb-2">Na defesa, mantenha os joelhos e as costas levemente dobrados.</li>
+            <li class="mb-2">Proteja a bola deixando o corpo entre ela e o defensor, com o braço livre levantado.</li>
+            <li class="mb-2">Treine bandejas dos dois lados da cesta. Pela direita, arremesse com a mão direita e salte com o pé esquerdo; pela esquerda, faça o contrário.</li>
+            <li class="mb-2">Na defesa, fique na ponta dos pés. Assim você reage mais rápido quando o adversário muda de direção.</li>
+            <li>Na defesa, fique um passo atrás do adversário. Assim dá para ajustar a posição rapidinho.</li>
+          </ol>
+          <p class="small mb-0">
+            <i>Dicas de Jesse R. Williams, técnico e líder comunitário ligado à National Pro-Am City Leagues
+            Association, uma das maiores ligas de basquete de rua dos Estados Unidos.</i>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== LIVRO DE COLORIR ====================
+         Uma aba por semana, 4 desenhos em cada (como no site de 1996).
+         "Imprimir" abre o desenho e chama a impressão (js/script.js). -->
+    <section id="colorir" class="secao">
+      <div class="container">
+        <h2 class="titulo-secao">
+          <img src="img/jogos/b-coloring.gif" alt="Livro de Colorir" width="419" height="51">
+        </h2>
+        <p class="intro">
+          Como você provavelmente mexe no computador melhor que o papai e a mamãe, use a impressora deles
+          para imprimir estes desenhos em preto e branco dos personagens de <b>Space Jam</b> e pinte você
+          mesmo! Os desenhos estão separados por semana, como no site original.
+        </p>
+
+        <ul class="nav nav-pills nav-pills-sj" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#colorir-semana1" type="button" role="tab">Semana 1</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#colorir-semana2" type="button" role="tab">Semana 2</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#colorir-semana3" type="button" role="tab">Semana 3</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#colorir-semana4" type="button" role="tab">Semana 4</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#colorir-semana5" type="button" role="tab">Semana 5</button>
+          </li>
+        </ul>
+
+        <div class="tab-content conteudo-estreito">
+          <div class="tab-pane fade show active" id="colorir-semana1" role="tabpanel">
+            <div class="row row-cols-2 row-cols-md-4 g-3">
+              <div class="col">
+                <div class="desenho-colorir">
+                  <a href="img/jogos/colorir/semana1-1.png" class="foto desenho" data-lightbox><img src="img/jogos/colorir/semana1-1.png" alt="Desenho para colorir 1" loading="lazy"></a>
+                  <a href="img/jogos/colorir/semana1-1.png" class="btn btn-sj btn-sm botao-imprimir" target="_blank" data-imprimir aria-label="Imprimir o desenho 1">Imprimir</a>
+                </div>
+              </div>
+              <div class="col">
+                <div class="desenho-colorir">
+                  <a href="img/jogos/colorir/semana1-2.png" class="foto desenho" data-lightbox><img src="img/jogos/colorir/semana1-2.png" alt="Desenho para colorir 2" loading="lazy"></a>
+                  <a href="img/jogos/colorir/semana1-2.png" class="btn btn-sj btn-sm botao-imprimir" target="_blank" data-imprimir aria-label="Imprimir o desenho 2">Imprimir</a>
+                </div>
+              </div>
+              <div class="col">
+                <div class="desenho-colorir">
+                  <a href="img/jogos/colorir/semana1-3.png" class="foto desenho" data-lightbox><img src="img/jogos/colorir/semana1-3.png" alt="Desenho para colorir 3" loading="lazy"></a>
+                  <a href="img/jogos/colorir/semana1-3.png" class="btn btn-sj btn-sm botao-imprimir" target="_blank" data-imprimir aria-label="Imprimir o desenho 3">Imprimir</a>
+                </div>
+              </div>
+              <div class="col">
+                <div class="desenho-colorir">
+                  <a href="img/jogos/colorir/semana1-4.png" class="foto desenho" data-lightbox><img src="img/jogos/colorir/semana1-4.png" alt="Desenho para colorir 4" loading="lazy"></a>
+                  <a href="img/jogos/colorir/semana1-4.png" class="btn btn-sj btn-sm botao-imprimir" target="_blank" data-imprimir aria-label="Imprimir o desenho 4">Imprimir</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="colorir-semana2" role="tabpanel">
+            <div class="row row-cols-2 row-cols-md-4 g-3">
+              <div class="col">
+                <div class="desenho-colorir">
+                  <a href="img/jogos/colorir/semana2-1.png" class="foto desenho" data-lightbox><img src="img/jogos/colorir/semana2-1.png" alt="Desenho para colorir 5" loading="lazy"></a>
+                  <a href="img/jogos/colorir/semana2-1.png" class="btn btn-sj btn-sm botao-imprimir" target="_blank" data-imprimir aria-label="Imprimir o desenho 5">Imprimir</a>
+                </div>
+              </div>
+              <div class="col">
+                <div class="desenho-colorir">
+                  <a href="img/jogos/colorir/semana2-2.png" class="foto desenho" data-lightbox><img src="img/jogos/colorir/semana2-2.png" alt="Desenho para colorir 6" loading="lazy"></a>
+                  <a href="img/jogos/colorir/semana2-2.png" class="btn btn-sj btn-sm botao-imprimir" target="_blank" data-imprimir aria-label="Imprimir o desenho 6">Imprimir</a>
+                </div>
+              </div>
+              <div class="col">
+                <div class="desenho-colorir">
+                  <a href="img/jogos/colorir/semana2-3.png" class="foto desenho" data-lightbox><img src="img/jogos/colorir/semana2-3.png" alt="Desenho para colorir 7" loading="lazy"></a>
+                  <a href="img/jogos/colorir/semana2-3.png" class="btn btn-sj btn-sm botao-imprimir" target="_blank" data-imprimir aria-label="Imprimir o desenho 7">Imprimir</a>
+                </div>
+              </div>
+              <div class="col">
+                <div class="desenho-colorir">
+                  <a href="img/jogos/colorir/semana2-4.png" class="foto desenho" data-lightbox><img src="img/jogos/colorir/semana2-4.png" alt="Desenho para colorir 8" loading="lazy"></a>
+                  <a href="img/jogos/colorir/semana2-4.png" class="btn btn-sj btn-sm botao-imprimir" target="_blank" data-imprimir aria-label="Imprimir o desenho 8">Imprimir</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="colorir-semana3" role="tabpanel">
+            <div class="row row-cols-2 row-cols-md-4 g-3">
+              <div class="col">
+                <div class="desenho-colorir">
+                  <a href="img/jogos/colorir/semana3-1.png" class="foto desenho" data-lightbox><img src="img/jogos/colorir/semana3-1.png" alt="Desenho para colorir 9" loading="lazy"></a>
+                  <a href="img/jogos/colorir/semana3-1.png" class="btn btn-sj btn-sm botao-imprimir" target="_blank" data-imprimir aria-label="Imprimir o desenho 9">Imprimir</a>
+                </div>
+              </div>
+              <div class="col">
+                <div class="desenho-colorir">
+                  <a href="img/jogos/colorir/semana3-2.png" class="foto desenho" data-lightbox><img src="img/jogos/colorir/semana3-2.png" alt="Desenho para colorir 10" loading="lazy"></a>
+                  <a href="img/jogos/colorir/semana3-2.png" class="btn btn-sj btn-sm botao-imprimir" target="_blank" data-imprimir aria-label="Imprimir o desenho 10">Imprimir</a>
+                </div>
+              </div>
+              <div class="col">
+                <div class="desenho-colorir">
+                  <a href="img/jogos/colorir/semana3-3.png" class="foto desenho" data-lightbox><img src="img/jogos/colorir/semana3-3.png" alt="Desenho para colorir 11" loading="lazy"></a>
+                  <a href="img/jogos/colorir/semana3-3.png" class="btn btn-sj btn-sm botao-imprimir" target="_blank" data-imprimir aria-label="Imprimir o desenho 11">Imprimir</a>
+                </div>
+              </div>
+              <div class="col">
+                <div class="desenho-colorir">
+                  <a href="img/jogos/colorir/semana3-4.png" class="foto desenho" data-lightbox><img src="img/jogos/colorir/semana3-4.png" alt="Desenho para colorir 12" loading="lazy"></a>
+                  <a href="img/jogos/colorir/semana3-4.png" class="btn btn-sj btn-sm botao-imprimir" target="_blank" data-imprimir aria-label="Imprimir o desenho 12">Imprimir</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="colorir-semana4" role="tabpanel">
+            <div class="row row-cols-2 row-cols-md-4 g-3">
+              <div class="col">
+                <div class="desenho-colorir">
+                  <a href="img/jogos/colorir/semana4-1.png" class="foto desenho" data-lightbox><img src="img/jogos/colorir/semana4-1.png" alt="Desenho para colorir 13" loading="lazy"></a>
+                  <a href="img/jogos/colorir/semana4-1.png" class="btn btn-sj btn-sm botao-imprimir" target="_blank" data-imprimir aria-label="Imprimir o desenho 13">Imprimir</a>
+                </div>
+              </div>
+              <div class="col">
+                <div class="desenho-colorir">
+                  <a href="img/jogos/colorir/semana4-2.png" class="foto desenho" data-lightbox><img src="img/jogos/colorir/semana4-2.png" alt="Desenho para colorir 14" loading="lazy"></a>
+                  <a href="img/jogos/colorir/semana4-2.png" class="btn btn-sj btn-sm botao-imprimir" target="_blank" data-imprimir aria-label="Imprimir o desenho 14">Imprimir</a>
+                </div>
+              </div>
+              <div class="col">
+                <div class="desenho-colorir">
+                  <a href="img/jogos/colorir/semana4-3.png" class="foto desenho" data-lightbox><img src="img/jogos/colorir/semana4-3.png" alt="Desenho para colorir 15" loading="lazy"></a>
+                  <a href="img/jogos/colorir/semana4-3.png" class="btn btn-sj btn-sm botao-imprimir" target="_blank" data-imprimir aria-label="Imprimir o desenho 15">Imprimir</a>
+                </div>
+              </div>
+              <div class="col">
+                <div class="desenho-colorir">
+                  <a href="img/jogos/colorir/semana4-4.png" class="foto desenho" data-lightbox><img src="img/jogos/colorir/semana4-4.png" alt="Desenho para colorir 16" loading="lazy"></a>
+                  <a href="img/jogos/colorir/semana4-4.png" class="btn btn-sj btn-sm botao-imprimir" target="_blank" data-imprimir aria-label="Imprimir o desenho 16">Imprimir</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="colorir-semana5" role="tabpanel">
+            <div class="row row-cols-2 row-cols-md-4 g-3">
+              <div class="col">
+                <div class="desenho-colorir">
+                  <a href="img/jogos/colorir/semana5-1.png" class="foto desenho" data-lightbox><img src="img/jogos/colorir/semana5-1.png" alt="Desenho para colorir 17" loading="lazy"></a>
+                  <a href="img/jogos/colorir/semana5-1.png" class="btn btn-sj btn-sm botao-imprimir" target="_blank" data-imprimir aria-label="Imprimir o desenho 17">Imprimir</a>
+                </div>
+              </div>
+              <div class="col">
+                <div class="desenho-colorir">
+                  <a href="img/jogos/colorir/semana5-2.png" class="foto desenho" data-lightbox><img src="img/jogos/colorir/semana5-2.png" alt="Desenho para colorir 18" loading="lazy"></a>
+                  <a href="img/jogos/colorir/semana5-2.png" class="btn btn-sj btn-sm botao-imprimir" target="_blank" data-imprimir aria-label="Imprimir o desenho 18">Imprimir</a>
+                </div>
+              </div>
+              <div class="col">
+                <div class="desenho-colorir">
+                  <a href="img/jogos/colorir/semana5-3.png" class="foto desenho" data-lightbox><img src="img/jogos/colorir/semana5-3.png" alt="Desenho para colorir 19" loading="lazy"></a>
+                  <a href="img/jogos/colorir/semana5-3.png" class="btn btn-sj btn-sm botao-imprimir" target="_blank" data-imprimir aria-label="Imprimir o desenho 19">Imprimir</a>
+                </div>
+              </div>
+              <div class="col">
+                <div class="desenho-colorir">
+                  <a href="img/jogos/colorir/semana5-4.png" class="foto desenho" data-lightbox><img src="img/jogos/colorir/semana5-4.png" alt="Desenho para colorir 20" loading="lazy"></a>
+                  <a href="img/jogos/colorir/semana5-4.png" class="btn btn-sj btn-sm botao-imprimir" target="_blank" data-imprimir aria-label="Imprimir o desenho 20">Imprimir</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== COISAS LEGAIS PARA VER ==================== -->
+    <section id="fotos" class="secao">
+      <div class="container">
+        <h2 class="titulo-secao">
+          <img src="img/jogos/b-stuff.gif" alt="Coisas Legais para Ver" width="230" height="88">
+        </h2>
+        <p class="intro">
+          Confira estas fotos legais de <b>Space Jam</b>. Clique para ampliar. <i>Fotos de Bruce Talamon.</i>
+        </p>
+
+        <!-- Álbum de polaroides: a legenda repete o alt; a inclinação vem do CSS -->
+        <div class="album">
+          <figure class="polaroide">
+            <a href="img/jogos/fotos/ns1.jpg" data-lightbox><img src="img/jogos/fotos/ns1.jpg" alt="Piu-Piu dança twist com Void, o Monstar." loading="lazy"></a>
+            <figcaption>Piu-Piu dança twist com Void, o Monstar.</figcaption>
+          </figure>
+          <figure class="polaroide">
+            <a href="img/jogos/fotos/ns2.jpg" data-lightbox><img src="img/jogos/fotos/ns2.jpg" alt="Pernalonga acena de dentro do ouvido de Michael Jordan." loading="lazy"></a>
+            <figcaption>Pernalonga acena de dentro do ouvido de Michael Jordan.</figcaption>
+          </figure>
+          <figure class="polaroide">
+            <a href="img/jogos/fotos/ns3.jpg" data-lightbox><img src="img/jogos/fotos/ns3.jpg" alt="Patolino dá o seu selo de aprovação." loading="lazy"></a>
+            <figcaption>Patolino dá o seu selo de aprovação.</figcaption>
+          </figure>
+          <figure class="polaroide">
+            <a href="img/jogos/fotos/ns4.jpg" data-lightbox><img src="img/jogos/fotos/ns4.jpg" alt="Um Monstar leva um banho de tinta." loading="lazy"></a>
+            <figcaption>Um Monstar leva um banho de tinta.</figcaption>
+          </figure>
+          <figure class="polaroide">
+            <a href="img/jogos/fotos/ns5.jpg" data-lightbox><img src="img/jogos/fotos/ns5.jpg" alt="Os ameaçadores Monstars." loading="lazy"></a>
+            <figcaption>Os ameaçadores Monstars.</figcaption>
+          </figure>
+          <figure class="polaroide">
+            <a href="img/jogos/fotos/ns6.jpg" data-lightbox><img src="img/jogos/fotos/ns6.jpg" alt="Void coça as costas." loading="lazy"></a>
+            <figcaption>Void coça as costas.</figcaption>
+          </figure>
+          <figure class="polaroide">
+            <a href="img/jogos/fotos/ns7.jpg" data-lightbox><img src="img/jogos/fotos/ns7.jpg" alt="Bupkus, o Monstar." loading="lazy"></a>
+            <figcaption>Bupkus, o Monstar.</figcaption>
+          </figure>
+          <figure class="polaroide">
+            <a href="img/jogos/fotos/ns8.jpg" data-lightbox><img src="img/jogos/fotos/ns8.jpg" alt="Zilch, o Nerdluck, encara o Eufrazino." loading="lazy"></a>
+            <figcaption>Zilch, o Nerdluck, encara o Eufrazino.</figcaption>
+          </figure>
+          <figure class="polaroide">
+            <a href="img/jogos/fotos/ns9.jpg" data-lightbox><img src="img/jogos/fotos/ns9.jpg" alt="Um Monstar na quadra." loading="lazy"></a>
+            <figcaption>Um Monstar na quadra.</figcaption>
+          </figure>
+          <figure class="polaroide">
+            <a href="img/jogos/fotos/ns10.jpg" data-lightbox><img src="img/jogos/fotos/ns10.jpg" alt="Piu-Piu ajuda o Tune Squad." loading="lazy"></a>
+            <figcaption>Piu-Piu ajuda o Tune Squad.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== RODAPÉ (igual em todas as páginas) ==================== -->
+  <footer class="rodape">
+    <!-- Mapa do site: preenchido pelo js/script.js (parte 4) -->
+    <nav id="mapa" class="mapa-rodape" aria-label="Mapa do site"></nav>
+    <p class="mb-2">
+      <a href="https://www.spacejam.com/1996/" target="_blank" rel="noopener">Site original de 1996 <span aria-hidden="true">↗</span></a>
+    </p>
+    <p class="mb-1">SPACE JAM, personagens, nomes e elementos relacionados são marcas registradas da Warner Bros. &copy; 1996.</p>
+    <p class="mb-0">Versão remasterizada feita como trabalho acadêmico de Introdução ao Desenvolvimento Web, sem fins comerciais.</p>
+  </footer>
+
+  <button type="button" class="btn-topo" aria-label="Voltar ao topo">&#9650;</button>
+
+  <!-- Janela do lightbox: mostra a imagem ampliada (controlada pelo js/script.js) -->
+  <div class="modal fade" id="lightbox" tabindex="-1" aria-label="Imagem ampliada" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header border-0 pb-0">
+          <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body text-center">
+          <img class="lightbox-imagem" alt="">
+          <p class="lightbox-legenda mt-3 mb-0"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 (JS), scripts do site e jogos (só nesta página) -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/jogos.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Lineup | Space Jam</title>
+  <meta name="description" content="The Lineup: Looney Tunes, jogadores da NBA, atores e vilões de Space Jam (1996).">
+  <link rel="icon" href="img/comum/littlelogo.png">
+  <!-- Bootstrap 5 (CSS), salvo no projeto: funciona sem internet -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Estilo do site: vem depois do Bootstrap para poder sobrescrever -->
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<!-- Tema do Lineup (cores no css/style.css, seção 1) -->
+<body class="tema-lineup">
+
+  <!-- ==================== MENU (igual em todas as páginas) ====================
+       Se mudar o menu, mude em TODAS as páginas (no VS Code: Ctrl+Shift+H).
+       Na página atual, o link da seção recebe class="active". -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-sj sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="img/comum/littlelogo.png" alt="Space Jam: voltar ao início" width="70" height="60">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu-principal"
+        aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu-principal">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">O Filme</a>
+            <ul class="dropdown-menu">
+              <li><h6 class="dropdown-header">Jam Central</h6></li>
+              <li><a class="dropdown-item" href="filme.html">Visão geral</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="filme.html#producao">Notas de Produção</a></li>
+              <li><a class="dropdown-item" href="filme.html#cineastas">Os Cineastas</a></li>
+              <li><a class="dropdown-item" href="filme.html#trailer">Trailer</a></li>
+              <li><a class="dropdown-item" href="filme.html#fotos">Fotos do Filme</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" aria-current="page" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Elenco</a>
+            <ul class="dropdown-menu">
+              <li><h6 class="dropdown-header">The Lineup</h6></li>
+              <li><a class="dropdown-item" href="elenco.html">Visão geral</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="elenco.html#looney-tunes">Looney Tunes</a></li>
+              <li><a class="dropdown-item" href="elenco.html#jogadores">Jogadores da NBA</a></li>
+              <li><a class="dropdown-item" href="elenco.html#atores">Atores</a></li>
+              <li><a class="dropdown-item" href="elenco.html#viloes">Os Vilões</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Bastidores</a>
+            <ul class="dropdown-menu">
+              <li><h6 class="dropdown-header">Behind the Jam</h6></li>
+              <li><a class="dropdown-item" href="bastidores.html">Visão geral</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="bastidores.html#personagens">Criação dos Personagens</a></li>
+              <li><a class="dropdown-item" href="bastidores.html#esbocos">Esboços da Animação</a></li>
+              <li><a class="dropdown-item" href="bastidores.html#making-of">Imagens do Set</a></li>
+              <li><a class="dropdown-item" href="bastidores.html#tecnica">Notas Técnicas</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Trilha Sonora</a>
+            <ul class="dropdown-menu">
+              <li><h6 class="dropdown-header">Lunar Tunes</h6></li>
+              <li><a class="dropdown-item" href="trilha.html">Visão geral</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="trilha.html#faixas">As Músicas</a></li>
+              <li><a class="dropdown-item" href="trilha.html#destaques">Artistas em Destaque</a></li>
+              <li><a class="dropdown-item" href="trilha.html#radio">No Rádio</a></li>
+              <li><a class="dropdown-item" href="trilha.html#frases">Frases do Filme</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Jogos</a>
+            <ul class="dropdown-menu dropdown-menu-lg-end">
+              <li><h6 class="dropdown-header">Junior Jam</h6></li>
+              <li><a class="dropdown-item" href="jogos.html">Visão geral</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="jogos.html#quiz">Quiz dos Looney Tunes</a></li>
+              <li><a class="dropdown-item" href="jogos.html#monstars">Match the Monstars</a></li>
+              <li><a class="dropdown-item" href="jogos.html#dicas">Dicas de Basquete</a></li>
+              <li><a class="dropdown-item" href="jogos.html#colorir">Livro de Colorir</a></li>
+              <li><a class="dropdown-item" href="jogos.html#fotos">Coisas Legais para Ver</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== CAPA ====================
+       Cenário do filme (--capa do tema, css/style.css), planeta, título,
+       texto e atalhos para as seções desta página. -->
+  <header class="capa">
+    <div class="container capa-conteudo">
+      <img src="img/home/icone-lineup.png" class="capa-planeta" alt="" width="63" height="40">
+      <h1 class="capa-titulo">Elenco</h1>
+      <p class="capa-texto">
+        O elenco, os personagens, os jogadores, os Looney Tunes! Quando foi que Michael Jordan virou ator?
+        Quem são os Monstars, e como eles conseguem fazer até o Taz desmaiar? Há quanto tempo o Pernalonga
+        deixa o Patolino maluco? Leia tudo aqui e depois teste o que aprendeu no
+        <a href="jogos.html#quiz">Quiz dos Looney Tunes</a>.
+      </p>
+      <ul class="subnav capa-atalhos">
+        <li><a href="#looney-tunes">Looney Tunes</a></li>
+        <li><a href="#jogadores">Jogadores da NBA</a></li>
+        <li><a href="#atores">Atores</a></li>
+        <li><a href="#viloes">Os Vilões</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ==================== LOONEY TUNES ==================== -->
+    <section id="looney-tunes" class="secao">
+      <div class="container">
+        <h2 class="titulo-secao">
+          <img src="img/elenco/b-tunes.gif" alt="Biografias dos Looney Tunes" width="410" height="52">
+        </h2>
+        <p class="intro">
+          Da luta contra o Eixo na Segunda Guerra Mundial a viagens pelo espaço sideral, o Pernalonga já
+          viu de tudo. Conheça a história de cada um dos Looney Tunes.
+        </p>
+
+        <!-- Faixa com rolagem lateral. O card mostra o texto resumido; o botão
+             "Ler a história" abre o texto completo (js/script.js, parte 6). -->
+        <div class="faixa" role="region" aria-label="Biografias dos Looney Tunes">
+          <button type="button" class="faixa-botao anterior" aria-label="Anteriores">&lsaquo;</button>
+          <div class="faixa-trilho" tabindex="0">
+            <div class="faixa-item">
+              <div class="card card-sj bio">
+                <img src="img/elenco/looney/c-bugs.jpg" class="card-imagem" alt="Pernalonga" width="270" height="206">
+                <div class="card-body">
+                  <h3 class="card-title"><img src="img/elenco/looney/ct-bugs.png" class="titulo-imagem" alt="Bugs Bunny" width="161" height="27"></h3>
+                  <p class="card-subtitle mb-2">No Brasil: Pernalonga</p>
+                  <p class="card-text">
+                    O astro dos Looney Tunes já foi chamado de "clássico", "uma instituição americana" e "um dos
+                    nossos heróis nacionais", sem falar em "coelho maluco". Ganhou o Oscar pelo curta
+                    <i>Knighty-Knight Bugs</i> (1958) e estrelou mais de 175 desenhos. Em <b>Space Jam</b>, ganha
+                    pela primeira vez o papel principal num longa original da Warner, ao lado de Michael Jordan.
+                  </p>
+                  <button type="button" class="btn btn-sj btn-sm mt-auto" data-historia>Ler a história</button>
+                </div>
+              </div>
+            </div>
+            <div class="faixa-item">
+              <div class="card card-sj bio">
+                <img src="img/elenco/looney/c-daffy.jpg" class="card-imagem" alt="Patolino" width="206" height="270">
+                <div class="card-body">
+                  <h3 class="card-title"><img src="img/elenco/looney/ct-daffy.png" class="titulo-imagem" alt="Daffy Duck" width="152" height="29"></h3>
+                  <p class="card-subtitle mb-2">No Brasil: Patolino</p>
+                  <p class="card-text">
+                    Um dos únicos grandes astros da Warner que surgiram antes do Pernalonga. Estreou em
+                    <i>Porky's Duck Hunt</i>, de Tex Avery, como um pato que, em vez de fugir do caçador, saía
+                    pulando feito maluco pelo lago: "Hoo-hoo! Hoo-hoo!".
+                  </p>
+                  <button type="button" class="btn btn-sj btn-sm mt-auto" data-historia>Ler a história</button>
+                </div>
+              </div>
+            </div>
+            <div class="faixa-item">
+              <div class="card card-sj bio">
+                <img src="img/elenco/looney/c-porky.jpg" class="card-imagem" alt="Gaguinho" width="270" height="206">
+                <div class="card-body">
+                  <h3 class="card-title"><img src="img/elenco/looney/ct-porky.png" class="titulo-imagem" alt="Porky Pig" width="128" height="29"></h3>
+                  <p class="card-subtitle mb-2">No Brasil: Gaguinho</p>
+                  <p class="card-text">
+                    O primeiro dos astros da Warner. Virou estrela em <i>I Haven't Got a Hat</i> (1935), de Friz
+                    Freleng, que se inspirou em dois colegas de infância apelidados de Piggy e Porky.
+                    "Estávamos procurando um personagem novo, e o público nos disse que era o Porky."
+                  </p>
+                  <button type="button" class="btn btn-sj btn-sm mt-auto" data-historia>Ler a história</button>
+                </div>
+              </div>
+            </div>
+            <div class="faixa-item">
+              <div class="card card-sj bio">
+                <img src="img/elenco/looney/c-taz.jpg" class="card-imagem" alt="Taz" width="206" height="270">
+                <div class="card-body">
+                  <h3 class="card-title"><img src="img/elenco/looney/ct-taz.png" class="titulo-imagem" alt="Taz" width="48" height="22"></h3>
+                  <p class="card-subtitle mb-2">O Diabo da Tasmânia</p>
+                  <p class="card-text">
+                    O mais novo e, para muitos, o mais empolgante dos personagens clássicos. Estreou em
+                    <i>Devil May Hare</i> (1954) e quase foi aposentado pelo chefe do estúdio, até que o próprio
+                    Jack Warner sentiu falta dele. Quando Mel Blanc perguntou como era a voz de um diabo da
+                    tasmânia, ouviu: "Ninguém nunca ouviu um".
+                  </p>
+                  <button type="button" class="btn btn-sj btn-sm mt-auto" data-historia>Ler a história</button>
+                </div>
+              </div>
+            </div>
+            <div class="faixa-item">
+              <div class="card card-sj bio">
+                <img src="img/elenco/looney/c-slytweety.jpg" class="card-imagem" alt="Frajola e Piu-Piu" width="206" height="270">
+                <div class="card-body">
+                  <h3 class="card-title"><img src="img/elenco/looney/ct-slytweety.png" class="titulo-imagem" alt="Sylvester &amp; Tweety" width="255" height="29"></h3>
+                  <p class="card-subtitle mb-2">No Brasil: Frajola e Piu-Piu</p>
+                  <p class="card-text">
+                    A dupla estreou em <i>Tweetie Pie</i> (1947), de Friz Freleng, que deu à Warner o seu
+                    primeiro Oscar de animação. Em 42 aventuras, o Piu-Piu provou que não hesitava em usar
+                    alfinetes, bigornas, dinamite ou canhões para se livrar do "gatinho".
+                  </p>
+                  <button type="button" class="btn btn-sj btn-sm mt-auto" data-historia>Ler a história</button>
+                </div>
+              </div>
+            </div>
+            <div class="faixa-item">
+              <div class="card card-sj bio">
+                <img src="img/elenco/looney/c-elmer.jpg" class="card-imagem" alt="Hortelino Troca-Letras" width="206" height="270">
+                <div class="card-body">
+                  <h3 class="card-title"><img src="img/elenco/looney/ct-elmer.png" class="titulo-imagem" alt="Elmer Fudd" width="155" height="23"></h3>
+                  <p class="card-subtitle mb-2">No Brasil: Hortelino Troca-Letras</p>
+                  <p class="card-text">
+                    O caçador que apontou a espingarda para o Pernalonga em <i>A Wild Hare</i> (1940) e foi o
+                    primeiro a ouvir o famoso "O que é que há, velhinho?". Estar no lugar certo, na hora certa,
+                    fez dele o eterno trapalhão e parceiro de piadas do coelho.
+                  </p>
+                  <button type="button" class="btn btn-sj btn-sm mt-auto" data-historia>Ler a história</button>
+                </div>
+              </div>
+            </div>
+            <div class="faixa-item">
+              <div class="card card-sj bio">
+                <img src="img/elenco/looney/c-coyoterr.jpg" class="card-imagem" alt="Coiote e Papa-Léguas" width="206" height="270">
+                <div class="card-body">
+                  <h3 class="card-title"><img src="img/elenco/looney/ct-coyoterr.png" class="titulo-imagem" alt="Wile E. Coyote &amp; Road Runner" width="257" height="53"></h3>
+                  <p class="card-subtitle mb-2">No Brasil: Coiote e Papa-Léguas</p>
+                  <p class="card-text">
+                    Criados no fim dos anos 1940 por Michael Maltese e Chuck Jones como uma paródia das
+                    perseguições dos desenhos, estrearam em <i>Fast and Furry-ous</i> (1949). O Coiote quer
+                    provar que é possível pegar o Papa-Léguas e, como planos simples não funcionam, inventa
+                    planos cada vez mais complicados.
+                  </p>
+                  <button type="button" class="btn btn-sj btn-sm mt-auto" data-historia>Ler a história</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button type="button" class="faixa-botao proximo" aria-label="Próximos">&rsaquo;</button>
+        </div>
+
+        <p class="text-center mt-4 mb-0">
+          <img src="img/elenco/cl-tunesquad.png" alt="Tune Squad" width="180" height="113"><br>
+          <i>Textos de Joe Adamson, historiador de cinema, autor de <b>Bugs Bunny: Fifty Years and Only One
+          Grey Hare</b> e <b>Tex Avery: King of Cartoons</b>.</i>
+        </p>
+      </div>
+    </section>
+
+    <!-- ==================== JOGADORES DA NBA (Planet B-Ball) ==================== -->
+    <section id="jogadores" class="secao">
+      <div class="container">
+        <h2 class="titulo-secao">
+          <img src="img/elenco/b-player.gif" alt="Biografias dos Jogadores" width="275" height="49">
+        </h2>
+        <p class="intro">
+          Quando não estão atuando, esses caras se dedicam a um esporte chamado "basquete".
+          <br><small>(Dados da temporada 1995-96, como no site original.)</small>
+        </p>
+
+        <!-- Faixa com rolagem lateral: um card por jogador -->
+        <div class="faixa faixa-jogadores" role="region" aria-label="Biografias dos jogadores">
+          <button type="button" class="faixa-botao anterior" aria-label="Anteriores">&lsaquo;</button>
+          <div class="faixa-trilho" tabindex="0">
+            <div class="faixa-item">
+              <div class="card card-sj jogador">
+                <img src="img/elenco/jogadores/cp-jordan.jpg" class="card-imagem" alt="Michael Jordan" width="136" height="136">
+                <div class="card-body">
+                  <h3 class="card-title"><img src="img/elenco/jogadores/ct-jordan.png" class="titulo-imagem" alt="Michael Jordan" width="208" height="23"></h3>
+                  <ul class="list-unstyled mb-0">
+                    <li>Time: <b>Chicago Bulls</b></li>
+                    <li>Posição: <b>Armador</b></li>
+                    <li>Altura: <b>1,98 m</b></li>
+                    <li>Nascimento: <b>17/02/1963, Brooklyn, Nova York</b></li>
+                    <li>Universidade: <b>North Carolina</b></li>
+                    <li>Média na carreira: <b>32,0 pontos por jogo</b></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="faixa-item">
+              <div class="card card-sj jogador">
+                <img src="img/elenco/jogadores/cp-ewing.jpg" class="card-imagem" alt="Patrick Ewing" width="136" height="136">
+                <div class="card-body">
+                  <h3 class="card-title"><img src="img/elenco/jogadores/ct-ewing.png" class="titulo-imagem" alt="Patrick Ewing" width="188" height="30"></h3>
+                  <ul class="list-unstyled mb-0">
+                    <li>Time: <b>New York Knicks</b></li>
+                    <li>Posição: <b>Pivô</b></li>
+                    <li>Altura: <b>2,13 m</b></li>
+                    <li>Nascimento: <b>05/08/1962, Kingston, Jamaica</b></li>
+                    <li>Universidade: <b>Georgetown</b></li>
+                    <li>Média na carreira: <b>23,7 pontos por jogo</b></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="faixa-item">
+              <div class="card card-sj jogador">
+                <img src="img/elenco/jogadores/cp-barkley.jpg" class="card-imagem" alt="Charles Barkley" width="136" height="136">
+                <div class="card-body">
+                  <h3 class="card-title"><img src="img/elenco/jogadores/ct-barkley.png" class="titulo-imagem" alt="Charles Barkley" width="211" height="30"></h3>
+                  <ul class="list-unstyled mb-0">
+                    <li>Time: <b>Houston Rockets</b></li>
+                    <li>Posição: <b>Ala</b></li>
+                    <li>Altura: <b>1,98 m</b></li>
+                    <li>Nascimento: <b>20/02/1963, Leeds, Alabama</b></li>
+                    <li>Universidade: <b>Auburn</b></li>
+                    <li>Média na carreira: <b>23,3 pontos por jogo</b></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="faixa-item">
+              <div class="card card-sj jogador">
+                <img src="img/elenco/jogadores/cp-johnson.jpg" class="card-imagem" alt="Larry Johnson" width="136" height="136">
+                <div class="card-body">
+                  <h3 class="card-title"><img src="img/elenco/jogadores/ct-johnson.png" class="titulo-imagem" alt="Larry Johnson" width="198" height="30"></h3>
+                  <ul class="list-unstyled mb-0">
+                    <li>Time: <b>New York Knicks</b></li>
+                    <li>Posição: <b>Ala</b></li>
+                    <li>Altura: <b>2,01 m</b></li>
+                    <li>Nascimento: <b>14/03/1969, Tyler, Texas</b></li>
+                    <li>Universidade: <b>UNLV (Nevada-Las Vegas)</b></li>
+                    <li>Média na carreira: <b>19,6 pontos por jogo</b></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="faixa-item">
+              <div class="card card-sj jogador">
+                <img src="img/elenco/jogadores/cp-bogues.jpg" class="card-imagem" alt="Muggsy Bogues" width="136" height="136">
+                <div class="card-body">
+                  <h3 class="card-title"><img src="img/elenco/jogadores/ct-bogues.png" class="titulo-imagem" alt="Muggsy Bogues" width="209" height="27"></h3>
+                  <ul class="list-unstyled mb-0">
+                    <li>Time: <b>Charlotte Hornets</b></li>
+                    <li>Posição: <b>Armador</b></li>
+                    <li>Altura: <b>1,60 m</b></li>
+                    <li>Nascimento: <b>09/01/1965, Baltimore, Maryland</b></li>
+                    <li>Universidade: <b>Wake Forest</b></li>
+                    <li>Média na carreira: <b>8,4 pontos por jogo</b></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="faixa-item">
+              <div class="card card-sj jogador">
+                <img src="img/elenco/jogadores/cp-bradley.jpg" class="card-imagem" alt="Shawn Bradley" width="136" height="136">
+                <div class="card-body">
+                  <h3 class="card-title"><img src="img/elenco/jogadores/ct-bradley.png" class="titulo-imagem" alt="Shawn Bradley" width="202" height="29"></h3>
+                  <ul class="list-unstyled mb-0">
+                    <li>Time: <b>New Jersey Nets</b></li>
+                    <li>Posição: <b>Pivô</b></li>
+                    <li>Altura: <b>2,29 m</b></li>
+                    <li>Nascimento: <b>22/03/1972, Landstuhl, Alemanha</b></li>
+                    <li>Universidade: <b>Brigham Young</b></li>
+                    <li>Média na carreira: <b>10,6 pontos por jogo</b></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button type="button" class="faixa-botao proximo" aria-label="Próximos">&rsaquo;</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ATORES ==================== -->
+    <section id="atores" class="secao">
+      <div class="container">
+        <h2 class="titulo-secao">
+          <img src="img/elenco/b-cast.gif" alt="Biografias do Elenco" width="231" height="47">
+        </h2>
+        <p class="intro">Não, o nome verdadeiro dele não é Newman.</p>
+
+        <!-- Cards horizontais: foto à esquerda, texto à direita -->
+        <div class="row g-4">
+          <div class="col-12 col-lg-6">
+            <div class="card card-sj">
+              <div class="row g-0">
+                <div class="col-4 text-center pt-3">
+                  <img src="img/elenco/atores/jordan.jpg" alt="Michael Jordan" width="120" height="153">
+                </div>
+                <div class="col-8">
+                  <div class="card-body">
+                    <h3 class="card-title h4">Michael Jordan</h3>
+                    <p class="card-subtitle mb-2">Ele mesmo</p>
+                    <p class="card-text">
+                      Estreia no cinema com <b>Space Jam</b>. Considerado o maior jogador de basquete da
+                      história: ouro olímpico em 1984 e 1992, eleito quatro vezes o melhor jogador (MVP) da NBA
+                      e MVP das finais em todos os títulos do Bulls (1991 a 1993 e 1996). Em 1993, largou o
+                      basquete para jogar beisebol, mas voltou ao Bulls e foi campeão de novo em 1995-96.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="card card-sj">
+              <div class="row g-0">
+                <div class="col-4 text-center pt-3">
+                  <img src="img/elenco/atores/bugs.jpg" alt="Pernalonga" width="120" height="153">
+                </div>
+                <div class="col-8">
+                  <div class="card-body">
+                    <h3 class="card-title h4">Pernalonga (Bugs Bunny)</h3>
+                    <p class="card-subtitle mb-2">Ele mesmo</p>
+                    <p class="card-text">
+                      Ganhou o Oscar pelo curta <i>Knighty-Knight Bugs</i> (1958) e foi indicado outras três
+                      vezes. Estrela de mais de 175 desenhos, é a prova de que, para sobreviver no mundo de
+                      hoje, é preciso ser esperto e manter a calma. O superastro dos Looney Tunes é o par
+                      perfeito para o superastro Michael Jordan.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="card card-sj">
+              <div class="row g-0">
+                <div class="col-4 text-center pt-3">
+                  <img src="img/elenco/atores/knight.jpg" alt="Wayne Knight" width="120" height="153">
+                </div>
+                <div class="col-8">
+                  <div class="card-body">
+                    <h3 class="card-title h4">Wayne Knight</h3>
+                    <p class="card-subtitle mb-2">Stan Podolak</p>
+                    <p class="card-text">
+                      Famoso por <i>Jurassic Park</i> e pelo papel de Newman, o carteiro vizinho de Jerry na
+                      série <i>Seinfeld</i>. No cinema, também esteve em <i>Dirty Dancing</i>, <i>JFK</i> e
+                      <i>Instinto Selvagem</i>.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="card card-sj">
+              <div class="row g-0">
+                <div class="col-4 text-center pt-3">
+                  <img src="img/elenco/atores/randle.jpg" alt="Theresa Randle" width="120" height="153">
+                </div>
+                <div class="col-8">
+                  <div class="card-body">
+                    <h3 class="card-title h4">Theresa Randle</h3>
+                    <p class="card-subtitle mb-2">Juanita Jordan</p>
+                    <p class="card-text">
+                      Atuou em <i>Bad Boys</i>, <i>Um Tira da Pesada III</i> e em três filmes de Spike Lee:
+                      <i>Febre da Selva</i>, <i>Malcolm X</i> e <i>Garota 6</i>. Na TV, participou de
+                      <i>A Different World</i>.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 mx-auto">
+            <div class="card card-sj">
+              <div class="row g-0">
+                <div class="col-4 text-center pt-3">
+                  <img src="img/elenco/atores/devito.jpg" alt="Danny DeVito" width="120" height="153">
+                </div>
+                <div class="col-8">
+                  <div class="card-body">
+                    <h3 class="card-title h4">Danny DeVito</h3>
+                    <p class="card-subtitle mb-2">Voz de Swackhammer</p>
+                    <p class="card-text">
+                      Ator, diretor e produtor. Ficou famoso na série <i>Taxi</i> e atuou em <i>Um Estranho no
+                      Ninho</i>, <i>Irmãos Gêmeos</i> e <i>Matilda</i>, que também dirigiu. É sócio da
+                      produtora Jersey Films, de <i>Pulp Fiction</i>.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== OS VILÕES ==================== -->
+    <section id="viloes" class="secao">
+      <div class="container">
+        <h2 class="titulo-secao">
+          <img src="img/elenco/b-badguy.gif" alt="Os Vilões" width="293" height="48">
+        </h2>
+        <p class="intro">
+          De nanicos insignificantes a Monstars aterrorizantes num piscar de olhos. Não são o tipo de gente
+          que você gostaria de encontrar na quadra, nem em lugar nenhum.
+        </p>
+
+        <h3 class="titulo-texto titulo-espacado">Nerdlucks</h3>
+        <p class="text-center mb-4">
+          As descrições são dos próprios animadores, tiradas dos esboços de produção.
+        </p>
+        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-3 mb-5 grade-personagens">
+          <div class="col">
+            <div class="card card-sj text-center">
+              <img src="img/elenco/viloes/nullbig.png" class="card-imagem" alt="O Nerdluck Null" width="208" height="344">
+              <div class="card-body">
+                <h4 class="card-title">NULL</h4>
+                <p class="card-text">"nervoso, preocupado"</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card card-sj text-center">
+              <img src="img/elenco/viloes/zilchbig.png" class="card-imagem" alt="O Nerdluck Zilch" width="357" height="345">
+              <div class="card-body">
+                <h4 class="card-title">ZILCH</h4>
+                <p class="card-text">"curvado, peito para dentro"</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card card-sj text-center">
+              <img src="img/elenco/viloes/voidbig.png" class="card-imagem" alt="O Nerdluck Void" width="209" height="362">
+              <div class="card-body">
+                <h4 class="card-title">VOID</h4>
+                <p class="card-text">"desengonçado, postura boba"</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card card-sj text-center">
+              <img src="img/elenco/viloes/nadabig.png" class="card-imagem" alt="O Nerdluck Nada" width="203" height="283">
+              <div class="card-body">
+                <h4 class="card-title">NADA</h4>
+                <p class="card-text">"esperto e animado"</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card card-sj text-center">
+              <img src="img/elenco/viloes/bupkusbig.png" class="card-imagem" alt="O Nerdluck Bupkus" width="262" height="339">
+              <div class="card-body">
+                <h4 class="card-title">BUPKUS</h4>
+                <p class="card-text">"risadinha incontrolável; movimentos rápidos e bruscos"</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="titulo-texto titulo-espacado">Monstars</h3>
+        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-3 grade-personagens">
+          <div class="col">
+            <div class="card card-sj text-center">
+              <img src="img/elenco/viloes/nullstarbig.png" class="card-imagem" alt="O Monstar Null" width="360" height="453">
+              <div class="card-body"><h4 class="card-title mb-0">NULL</h4></div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card card-sj text-center">
+              <img src="img/elenco/viloes/zilchstarbig.png" class="card-imagem" alt="O Monstar Zilch" width="324" height="327">
+              <div class="card-body"><h4 class="card-title mb-0">ZILCH</h4></div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card card-sj text-center">
+              <img src="img/elenco/viloes/voidstarbig.png" class="card-imagem" alt="O Monstar Void" width="158" height="438">
+              <div class="card-body"><h4 class="card-title mb-0">VOID</h4></div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card card-sj text-center">
+              <img src="img/elenco/viloes/nadastarbig.png" class="card-imagem" alt="O Monstar Nada" width="396" height="293">
+              <div class="card-body"><h4 class="card-title mb-0">NADA</h4></div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card card-sj text-center">
+              <img src="img/elenco/viloes/bupkusstarbig.png" class="card-imagem" alt="O Monstar Bupkus" width="374" height="404">
+              <div class="card-body"><h4 class="card-title mb-0">BUPKUS</h4></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== RODAPÉ (igual em todas as páginas) ==================== -->
+  <footer class="rodape">
+    <!-- Mapa do site: preenchido pelo js/script.js (parte 4) -->
+    <nav id="mapa" class="mapa-rodape" aria-label="Mapa do site"></nav>
+    <p class="mb-2">
+      <a href="https://www.spacejam.com/1996/" target="_blank" rel="noopener">Site original de 1996 <span aria-hidden="true">↗</span></a>
+    </p>
+    <p class="mb-1">SPACE JAM, personagens, nomes e elementos relacionados são marcas registradas da Warner Bros. &copy; 1996.</p>
+    <p class="mb-0">Versão remasterizada feita como trabalho acadêmico de Introdução ao Desenvolvimento Web, sem fins comerciais.</p>
+  </footer>
+
+  <button type="button" class="btn-topo" aria-label="Voltar ao topo">&#9650;</button>
+
+  <!-- Janela "Ler a história" (Looney Tunes Bios). Preenchida pelo
+       js/script.js (parte 6) com o card clicado. -->
+  <div class="modal fade janela-sj" id="historia" tabindex="-1" aria-labelledby="historia-titulo" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <h2 class="modal-title" id="historia-titulo">História</h2>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body historia-corpo"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 (JS) e scripts do site -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lunar Tunes | Space Jam</title>
+  <meta name="description" content="Lunar Tunes: a trilha sonora de Space Jam (1996).">
+  <link rel="icon" href="img/comum/littlelogo.png">
+  <!-- Bootstrap 5 (CSS), salvo no projeto: funciona sem internet -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Estilo do site: vem depois do Bootstrap para poder sobrescrever -->
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<!-- Tema do Lunar Tunes (cores no css/style.css, seção 1) -->
+<body class="tema-tunes">
+
+  <!-- ==================== MENU (igual em todas as páginas) ====================
+       Se mudar o menu, mude em TODAS as páginas (no VS Code: Ctrl+Shift+H).
+       Na página atual, o link da seção recebe class="active". -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-sj sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="img/comum/littlelogo.png" alt="Space Jam: voltar ao início" width="70" height="60">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu-principal"
+        aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu-principal">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">O Filme</a>
+            <ul class="dropdown-menu">
+              <li><h6 class="dropdown-header">Jam Central</h6></li>
+              <li><a class="dropdown-item" href="filme.html">Visão geral</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="filme.html#producao">Notas de Produção</a></li>
+              <li><a class="dropdown-item" href="filme.html#cineastas">Os Cineastas</a></li>
+              <li><a class="dropdown-item" href="filme.html#trailer">Trailer</a></li>
+              <li><a class="dropdown-item" href="filme.html#fotos">Fotos do Filme</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Elenco</a>
+            <ul class="dropdown-menu">
+              <li><h6 class="dropdown-header">The Lineup</h6></li>
+              <li><a class="dropdown-item" href="elenco.html">Visão geral</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="elenco.html#looney-tunes">Looney Tunes</a></li>
+              <li><a class="dropdown-item" href="elenco.html#jogadores">Jogadores da NBA</a></li>
+              <li><a class="dropdown-item" href="elenco.html#atores">Atores</a></li>
+              <li><a class="dropdown-item" href="elenco.html#viloes">Os Vilões</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Bastidores</a>
+            <ul class="dropdown-menu">
+              <li><h6 class="dropdown-header">Behind the Jam</h6></li>
+              <li><a class="dropdown-item" href="bastidores.html">Visão geral</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="bastidores.html#personagens">Criação dos Personagens</a></li>
+              <li><a class="dropdown-item" href="bastidores.html#esbocos">Esboços da Animação</a></li>
+              <li><a class="dropdown-item" href="bastidores.html#making-of">Imagens do Set</a></li>
+              <li><a class="dropdown-item" href="bastidores.html#tecnica">Notas Técnicas</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" aria-current="page" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Trilha Sonora</a>
+            <ul class="dropdown-menu">
+              <li><h6 class="dropdown-header">Lunar Tunes</h6></li>
+              <li><a class="dropdown-item" href="trilha.html">Visão geral</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="trilha.html#faixas">As Músicas</a></li>
+              <li><a class="dropdown-item" href="trilha.html#destaques">Artistas em Destaque</a></li>
+              <li><a class="dropdown-item" href="trilha.html#radio">No Rádio</a></li>
+              <li><a class="dropdown-item" href="trilha.html#frases">Frases do Filme</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Jogos</a>
+            <ul class="dropdown-menu dropdown-menu-lg-end">
+              <li><h6 class="dropdown-header">Junior Jam</h6></li>
+              <li><a class="dropdown-item" href="jogos.html">Visão geral</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="jogos.html#quiz">Quiz dos Looney Tunes</a></li>
+              <li><a class="dropdown-item" href="jogos.html#monstars">Match the Monstars</a></li>
+              <li><a class="dropdown-item" href="jogos.html#dicas">Dicas de Basquete</a></li>
+              <li><a class="dropdown-item" href="jogos.html#colorir">Livro de Colorir</a></li>
+              <li><a class="dropdown-item" href="jogos.html#fotos">Coisas Legais para Ver</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== CAPA ====================
+       Cenário do filme (--capa do tema, css/style.css), planeta, título,
+       texto e atalhos para as seções desta página. -->
+  <header class="capa">
+    <div class="container capa-conteudo">
+      <img src="img/home/icone-lunartunes.png" class="capa-planeta" alt="" width="95" height="66">
+      <h1 class="capa-titulo">Trilha Sonora</h1>
+      <p class="capa-texto">
+        Quando os maiores astros do basquete e os maiores personagens de desenho enfrentam alienígenas, não
+        dá para economizar no som. <i>Space Jam: Music From and Inspired by the Motion Picture</i>, da Warner
+        Sunset/Atlantic Records, é uma das coletâneas mais poderosas do universo.
+      </p>
+      <ul class="subnav capa-atalhos">
+        <li><a href="#faixas">As Músicas</a></li>
+        <li><a href="#destaques">Artistas em Destaque</a></li>
+        <li><a href="#radio">No Rádio</a></li>
+        <li><a href="#frases">Frases do Filme</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ==================== AS MÚSICAS ==================== -->
+    <section id="faixas" class="secao">
+      <div class="container">
+        <h2 class="titulo-texto">Trilha Sonora da Warner Sunset e Atlantic Records</h2>
+
+        <div class="row g-4 align-items-start">
+          <div class="col-12 col-lg-5 text-center">
+            <img src="img/trilha/poster.jpg" alt="Pôster da trilha sonora de Space Jam com os nomes dos artistas" width="393" height="440" class="img-fluid">
+          </div>
+          <div class="col-12 col-lg-7">
+            <div class="caixa-texto">
+              <div class="table-responsive">
+                <table class="table table-sj table-striped table-hover align-middle">
+                  <thead>
+                    <tr>
+                      <th scope="col">Artista</th>
+                      <th scope="col">Música</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Seal</td><td>Fly Like An Eagle</td></tr>
+                    <tr><td>Coolio</td><td>The Winner</td></tr>
+                    <tr><td>Quad City DJ's</td><td>Space Jam</td></tr>
+                    <tr><td>R. Kelly</td><td>I Believe I Can Fly</td></tr>
+                    <tr><td>B. Real, Busta Rhymes, Coolio, LL Cool J &amp; Method Man</td><td>Hit 'Em High (The Monstars' Anthem)</td></tr>
+                    <tr><td>D'Angelo</td><td>I've Found My Smile Again</td></tr>
+                    <tr><td>Monica</td><td>For You I Will</td></tr>
+                    <tr><td>Salt-N-Pepa</td><td>Upside Down</td></tr>
+                    <tr><td>Robin S.</td><td>Givin' U All That I've Got</td></tr>
+                    <tr><td>Barry White &amp; Chris Rock</td><td>Basketball Jones</td></tr>
+                    <tr><td>All-4-One</td><td>I Turn To You</td></tr>
+                    <tr><td>R. Kelly &amp; Changing Faces feat. Jay-Z</td><td>All Of My Days</td></tr>
+                    <tr><td>Pernalonga (Billy West)</td><td>Buggin'</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="caixa-texto mt-3">
+              <p class="mb-2"><b>Curiosidade de 1996:</b></p>
+              <p class="mb-0">
+                O site original tinha trechos de cada música para ouvir em AIFF, WAV ou RealAudio (para
+                conexões de 14.4 e 28.8 kbps!). Uma loja vendia o CD por US$ 12,99 e a fita cassete por
+                US$ 8,99, com um pôster de Michael Jordan e do Pernalonga de brinde. Os arquivos de áudio
+                ficavam no site da Atlantic Records, que não existe mais.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ARTISTAS EM DESTAQUE ==================== -->
+    <section id="destaques" class="secao">
+      <div class="container">
+        <h2 class="titulo-texto">Artistas em Destaque</h2>
+
+        <div class="row g-4">
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card card-sj">
+              <img src="img/trilha/sealcover.jpg" class="card-imagem" alt="Capa do single de Seal" width="168" height="168">
+              <div class="card-body">
+                <h3 class="card-title h5">Seal</h3>
+                <p class="card-subtitle mb-2">"Fly Like An Eagle"</p>
+                <p class="card-text">
+                  Depois do sucesso de "Kiss From a Rose" na trilha de <i>Batman Eternamente</i> (1995), Seal
+                  regravou o clássico da Steve Miller Band. Ele mesmo produziu a faixa, com D'Angelo nos
+                  teclados.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card card-sj">
+              <img src="img/trilha/quadcover.jpg" class="card-imagem" alt="Capa do single de Quad City DJ's" width="168" height="168">
+              <div class="card-body">
+                <h3 class="card-title h5">Quad City DJ's</h3>
+                <p class="card-subtitle mb-2">"Space Jam"</p>
+                <p class="card-text">
+                  A dupla Nathaniel "C.C. Lemonhead" Orange e Johnny "Jay Ski" McGowan, dos sucessos
+                  "Whoot (There It Is)" e "C'mon N' Ride It (The Train)", fez a música-tema do filme.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card card-sj">
+              <img src="img/trilha/rkellycover.jpg" class="card-imagem" alt="Capa do single de R. Kelly" width="168" height="168">
+              <div class="card-body">
+                <h3 class="card-title h5">R. Kelly</h3>
+                <p class="card-subtitle mb-2">"I Believe I Can Fly"</p>
+                <p class="card-text">
+                  Convidado pessoalmente por Michael Jordan para criar o primeiro single da trilha, que virou
+                  a música mais lembrada do filme.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card card-sj">
+              <img src="img/trilha/all4one.jpg" class="card-imagem" alt="Capa do single de All-4-One" width="168" height="168">
+              <div class="card-body">
+                <h3 class="card-title h5">All-4-One</h3>
+                <p class="card-subtitle mb-2">"I Turn To You"</p>
+                <p class="card-text">
+                  Composta por Diane Warren e produzida por Jimmy Jam &amp; Terry Lewis. O grupo estourou em
+                  1994 com "I Swear", o single mais vendido daquele ano.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== NO RÁDIO ==================== -->
+    <section id="radio" class="secao">
+      <div class="container">
+        <h2 class="titulo-texto">(((No Rádio)))</h2>
+        <p class="intro">
+          Em 1996, estas eram algumas das rádios americanas tocando "Fly Like An Eagle", do Seal, o primeiro
+          single da trilha:
+        </p>
+        <div class="caixa-texto">
+          <ul class="row row-cols-2 row-cols-md-3 list-unstyled mb-0">
+            <li class="col">WPLJ, Nova York</li>
+            <li class="col">KYSR, Los Angeles</li>
+            <li class="col">WTMX, Chicago</li>
+            <li class="col">WYXR, Filadélfia</li>
+            <li class="col">WKQI, Detroit</li>
+            <li class="col">WRQX, Washington</li>
+            <li class="col">KHMX, Houston</li>
+            <li class="col">WBMX, Boston</li>
+            <li class="col">WPLL, Miami</li>
+            <li class="col">KPLZ, Seattle</li>
+            <li class="col">KFMB, San Diego</li>
+            <li class="col">KYKY, St. Louis</li>
+          </ul>
+          <p class="text-center mt-3 mb-0"><i>...e mais de 50 outras rádios pelos Estados Unidos.</i></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FRASES DO FILME ====================
+         Os sons que o site de 1996 oferecia para baixar. Cada botão data-som
+         toca o arquivo da pasta audio/ no player <audio> abaixo
+         (js/script.js, parte 7). -->
+    <section id="frases" class="secao">
+      <div class="container">
+        <h2 class="titulo-texto">Frases do Filme</h2>
+        <p class="intro">
+          Os sons que o site de 1996 oferecia para baixar, agora direto na página. Clique para ouvir;
+          clique de novo para parar.
+        </p>
+
+        <audio id="player-frases" preload="none"></audio>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3 frases">
+          <div class="col">
+            <div class="frase">
+              <button type="button" class="botao-som" data-som="audio/updoc.wav" aria-pressed="false" aria-label="Ouvir: What's up, Doc?"></button>
+              <p>
+                <span class="frase-texto">"What's up, Doc?"</span>
+                <span class="frase-traducao">O que é que há, velhinho?</span>
+                <span class="frase-quem">Pernalonga</span>
+              </p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="frase">
+              <button type="button" class="botao-som" data-som="audio/care.wav" aria-pressed="false" aria-label="Ouvir: What do we care?"></button>
+              <p>
+                <span class="frase-texto">"What do we care?"</span>
+                <span class="frase-traducao">E a gente com isso?</span>
+                <span class="frase-quem">Pernalonga</span>
+              </p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="frase">
+              <button type="button" class="botao-som" data-som="audio/easter.wav" aria-pressed="false" aria-label="Ouvir: You were expecting maybe the Easter Bunny?"></button>
+              <p>
+                <span class="frase-texto">"You were expecting maybe the Easter Bunny?"</span>
+                <span class="frase-traducao">Estava esperando o Coelhinho da Páscoa?</span>
+                <span class="frase-quem">Pernalonga</span>
+              </p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="frase">
+              <button type="button" class="botao-som" data-som="audio/explanation.wav" aria-pressed="false" aria-label="Ouvir: Pernalonga explica a situação"></button>
+              <p>
+                <span class="frase-texto">Pernalonga explica a situação</span>
+                <span class="frase-quem">Pernalonga</span>
+              </p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="frase">
+              <button type="button" class="botao-som" data-som="audio/weneed.wav" aria-pressed="false" aria-label="Ouvir: We need your HEEEEELP!"></button>
+              <p>
+                <span class="frase-texto">"We need your HEEEEELP!"</span>
+                <span class="frase-traducao">Precisamos da sua AJUUUUDA!</span>
+                <span class="frase-quem">Pernalonga</span>
+              </p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="frase">
+              <button type="button" class="botao-som" data-som="audio/huge.wav" aria-pressed="false" aria-label="Ouvir: They're HUGE!"></button>
+              <p>
+                <span class="frase-texto">"They're HUGE!"</span>
+                <span class="frase-traducao">Eles são ENORMES!</span>
+                <span class="frase-quem">Pernalonga</span>
+              </p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="frase">
+              <button type="button" class="botao-som" data-som="audio/looney.wav" aria-pressed="false" aria-label="Ouvir: Correction! We're Looney Tunes!..."></button>
+              <p>
+                <span class="frase-texto">"Correction! We're Looney Tunes!..."</span>
+                <span class="frase-traducao">Correção! Nós somos Looney Tunes!...</span>
+                <span class="frase-quem">Looney Tunes</span>
+              </p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="frase">
+              <button type="button" class="botao-som" data-som="audio/nuts.wav" aria-pressed="false" aria-label="Ouvir: You guys are nuts."></button>
+              <p>
+                <span class="frase-texto">"You guys are nuts."</span>
+                <span class="frase-traducao">Vocês são malucos.</span>
+                <span class="frase-quem">Michael Jordan</span>
+              </p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="frase">
+              <button type="button" class="botao-som" data-som="audio/goingon.wav" aria-pressed="false" aria-label="Ouvir: What's going on here?"></button>
+              <p>
+                <span class="frase-texto">"What's going on here?"</span>
+                <span class="frase-traducao">O que está acontecendo aqui?</span>
+                <span class="frase-quem">Michael Jordan</span>
+              </p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="frase">
+              <button type="button" class="botao-som" data-som="audio/smile.wav" aria-pressed="false" aria-label="Ouvir: Smile, okay?"></button>
+              <p>
+                <span class="frase-texto">"Smile, okay?"</span>
+                <span class="frase-traducao">Sorria, tá?</span>
+                <span class="frase-quem">Stan Podolak</span>
+              </p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="frase">
+              <button type="button" class="botao-som" data-som="audio/taking.wav" aria-pressed="false" aria-label="Ouvir: We are taking you to our theme park in outer space..."></button>
+              <p>
+                <span class="frase-texto">"We are taking you to our theme park in outer space..."</span>
+                <span class="frase-traducao">Vamos levar vocês para o nosso parque no espaço...</span>
+                <span class="frase-quem">Nerdlucks</span>
+              </p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="frase">
+              <button type="button" class="botao-som" data-som="audio/slaves.wav" aria-pressed="false" aria-label="Ouvir: You will be our slaves."></button>
+              <p>
+                <span class="frase-texto">"You will be our slaves."</span>
+                <span class="frase-traducao">Vocês serão nossos escravos.</span>
+                <span class="frase-quem">Nerdlucks</span>
+              </p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="frase">
+              <button type="button" class="botao-som" data-som="audio/muscle.wav" aria-pressed="false" aria-label="Ouvir: Don't move a muscle!"></button>
+              <p>
+                <span class="frase-texto">"Don't move a muscle!"</span>
+                <span class="frase-traducao">Ninguém se mexe!</span>
+                <span class="frase-quem">Nerdlucks</span>
+              </p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="frase">
+              <button type="button" class="botao-som" data-som="audio/lookingat.wav" aria-pressed="false" aria-label="Ouvir: What are you lookin' at?"></button>
+              <p>
+                <span class="frase-texto">"What are you lookin' at?"</span>
+                <span class="frase-traducao">Tá olhando o quê?</span>
+                <span class="frase-quem">Monstars</span>
+              </p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="frase">
+              <button type="button" class="botao-som" data-som="audio/growl.wav" aria-pressed="false" aria-label="Ouvir: Rugido dos Monstars"></button>
+              <p>
+                <span class="frase-texto">Rugido dos Monstars</span>
+                <span class="frase-quem">Monstars</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== RODAPÉ (igual em todas as páginas) ==================== -->
+  <footer class="rodape">
+    <!-- Mapa do site: preenchido pelo js/script.js (parte 4) -->
+    <nav id="mapa" class="mapa-rodape" aria-label="Mapa do site"></nav>
+    <p class="mb-2">
+      <a href="https://www.spacejam.com/1996/" target="_blank" rel="noopener">Site original de 1996 <span aria-hidden="true">↗</span></a>
+    </p>
+    <p class="mb-1">SPACE JAM, personagens, nomes e elementos relacionados são marcas registradas da Warner Bros. &copy; 1996.</p>
+    <p class="mb-0">Versão remasterizada feita como trabalho acadêmico de Introdução ao Desenvolvimento Web, sem fins comerciais.</p>
+  </footer>
+
+  <button type="button" class="btn-topo" aria-label="Voltar ao topo">&#9650;</button>
+
+  <!-- Bootstrap 5 (JS) e scripts do site -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
