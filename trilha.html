@@ -17,8 +17,7 @@
 <body class="tema-tunes">
 
   <!-- ==================== MENU (igual em todas as páginas) ====================
-       Se mudar o menu, mude em TODAS as páginas (no VS Code: Ctrl+Shift+H).
-       Na página atual, o link da seção recebe class="active". -->
+       Se mudar o menu, mude em TODAS as páginas . -->
   <nav class="navbar navbar-expand-lg navbar-dark navbar-sj sticky-top">
     <div class="container">
       <a class="navbar-brand" href="index.html">
@@ -75,7 +74,6 @@
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="trilha.html#faixas">As Músicas</a></li>
               <li><a class="dropdown-item" href="trilha.html#destaques">Artistas em Destaque</a></li>
-              <li><a class="dropdown-item" href="trilha.html#radio">No Rádio</a></li>
               <li><a class="dropdown-item" href="trilha.html#frases">Frases do Filme</a></li>
             </ul>
           </li>
@@ -112,7 +110,7 @@
       <ul class="subnav capa-atalhos">
         <li><a href="#faixas">As Músicas</a></li>
         <li><a href="#destaques">Artistas em Destaque</a></li>
-        <li><a href="#radio">No Rádio</a></li>
+        <li><a href="#amostras">Ouça a Trilha</a></li>
         <li><a href="#frases">Frases do Filme</a></li>
       </ul>
     </div>
@@ -155,6 +153,37 @@
                     <tr><td>Pernalonga (Billy West)</td><td>Buggin'</td></tr>
                   </tbody>
                 </table>
+              </div>
+              <div id="amostras" class="amostras-trilha">
+                <h3 class="h5">Sons do filme para ouvir</h3>
+                <p class="amostras-nota">Ouça alguns trechos de áudio de <i>Space Jam</i> sem sair da página. Clique de novo para parar.</p>
+                <audio id="player-frases" preload="none"></audio>
+                <div class="row row-cols-1 row-cols-md-2 g-3">
+                  <div class="col">
+                    <article class="faixa-audio">
+                      <button type="button" class="botao-som" data-som="audio/updoc.wav" aria-pressed="false" aria-label="Ouvir: What's up, Doc?"></button>
+                      <h4>"What's up, Doc?" <span>Pernalonga</span></h4>
+                    </article>
+                  </div>
+                  <div class="col">
+                    <article class="faixa-audio">
+                      <button type="button" class="botao-som" data-som="audio/weneed.wav" aria-pressed="false" aria-label="Ouvir: We need your help"></button>
+                      <h4>"We need your HEEEEELP!" <span>Pernalonga</span></h4>
+                    </article>
+                  </div>
+                  <div class="col">
+                    <article class="faixa-audio">
+                      <button type="button" class="botao-som" data-som="audio/huge.wav" aria-pressed="false" aria-label="Ouvir: They're huge"></button>
+                      <h4>"They're HUGE!" <span>Pernalonga</span></h4>
+                    </article>
+                  </div>
+                  <div class="col">
+                    <article class="faixa-audio">
+                      <button type="button" class="botao-som" data-som="audio/growl.wav" aria-pressed="false" aria-label="Ouvir: rugido dos Monstars"></button>
+                      <h4>Rugido dos Monstars <span>Os Monstars</span></h4>
+                    </article>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="caixa-texto mt-3">
@@ -234,34 +263,6 @@
       </div>
     </section>
 
-    <!-- ==================== NO RÁDIO ==================== -->
-    <section id="radio" class="secao">
-      <div class="container">
-        <h2 class="titulo-texto">(((No Rádio)))</h2>
-        <p class="intro">
-          Em 1996, estas eram algumas das rádios americanas tocando "Fly Like An Eagle", do Seal, o primeiro
-          single da trilha:
-        </p>
-        <div class="caixa-texto">
-          <ul class="row row-cols-2 row-cols-md-3 list-unstyled mb-0">
-            <li class="col">WPLJ, Nova York</li>
-            <li class="col">KYSR, Los Angeles</li>
-            <li class="col">WTMX, Chicago</li>
-            <li class="col">WYXR, Filadélfia</li>
-            <li class="col">WKQI, Detroit</li>
-            <li class="col">WRQX, Washington</li>
-            <li class="col">KHMX, Houston</li>
-            <li class="col">WBMX, Boston</li>
-            <li class="col">WPLL, Miami</li>
-            <li class="col">KPLZ, Seattle</li>
-            <li class="col">KFMB, San Diego</li>
-            <li class="col">KYKY, St. Louis</li>
-          </ul>
-          <p class="text-center mt-3 mb-0"><i>...e mais de 50 outras rádios pelos Estados Unidos.</i></p>
-        </div>
-      </div>
-    </section>
-
     <!-- ==================== FRASES DO FILME ====================
          Os sons que o site de 1996 oferecia para baixar. Cada botão data-som
          toca o arquivo da pasta audio/ no player <audio> abaixo
@@ -274,7 +275,6 @@
           clique de novo para parar.
         </p>
 
-        <audio id="player-frases" preload="none"></audio>
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3 frases">
           <div class="col">
             <div class="frase">

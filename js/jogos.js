@@ -193,10 +193,15 @@ function mostrarRodada() {
   match.opcoes.classList.remove('d-none');
 }
 
-function escolherMonstar(nome) {
+function escolherMonstar(botaoEscolhido) {
+  const nome = botaoEscolhido.dataset.monstar;
   const rodada = RODADAS[match.atual];
+  match.opcoes.querySelectorAll('.acertou, .errou').forEach(function (botao) {
+    botao.classList.remove('acertou', 'errou');
+  });
 
   if (nome === rodada.correta) {
+    botaoEscolhido.classList.add('acertou');
     match.opcoes.classList.add('d-none');
     match.feedback.innerHTML =
       '<img src="' + PASTA_MATCH + 'g-right.png" alt="Certo!" width="158" height="44"><br>' +
@@ -209,6 +214,7 @@ function escolherMonstar(nome) {
     match.proximo.classList.remove('d-none');
     match.proximo.focus();
   } else {
+    botaoEscolhido.classList.add('errou');
     match.feedback.innerHTML =
       '<img src="' + PASTA_MATCH + 'g-wrong.png" alt="Errado!" width="136" height="34">' +
       '<p class="mt-2 mb-0">Não é o ' + nome.toUpperCase() + '. Tente de novo!</p>';
@@ -218,7 +224,7 @@ function escolherMonstar(nome) {
 if (match.nerdluck) {
   match.opcoes.querySelectorAll('[data-monstar]').forEach(function (botao) {
     botao.addEventListener('click', function () {
-      escolherMonstar(botao.dataset.monstar);
+      escolherMonstar(botao);
     });
   });
 
